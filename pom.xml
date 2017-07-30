@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.xeomar.pom</groupId>
+	<artifactId>agg</artifactId>
+	<version>3.0.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<name>Xeomar Pom Aggregator</name>
+
+	<repositories>
+		<repository>
+			<id>xeo</id>
+			<url>https://code.xeomar.com/repo/xeo</url>
+		</repository>
+	</repositories>
+
+	<modules>
+		<module>top</module>
+		<module>jar</module>
+		<module>asm</module>
+		<module>mod</module>
+	</modules>
+
+	<distributionManagement>
+		<repository>
+			<id>xeo-release</id>
+			<url>https://code.xeomar.com/repo/xeo-release/</url>
+		</repository>
+
+		<snapshotRepository>
+			<id>xeo-snapshot</id>
+			<url>https://code.xeomar.com/repo/xeo-snapshot/</url>
+		</snapshotRepository>
+	</distributionManagement>
+	
+</project>

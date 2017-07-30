@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.xeomar.pom</groupId>
+	<artifactId>top</artifactId>
+	<version>3.0.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<name>Xeomar Top POM</name>
+	<description>The top pom for all Xeomar projects using Maven.</description>
+	<inceptionYear>2010</inceptionYear>
+	
+	<repositories>
+		<repository>
+			<id>xeo</id>
+			<url>https://code.xeomar.com/repo/xeo</url>
+		</repository>
+	</repositories>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>xeo-plugin</id>
+			<url>https://code.xeomar.com/repo/xeo</url>
+		</pluginRepository>
+	</pluginRepositories>
+
+	<organization>
+		<name>Xeomar</name>
+		<url>http://www.xeomar.com</url>
+	</organization>
+	
+	<developers>
+		<developer>
+			<name>Mark Soderquist</name>
+			<email>mark@xeomar.com</email>
+			<organization>Xeomar</organization>
+			<timezone>MDT</timezone>
+		</developer>
+	</developers>
+
+	<ciManagement>
+		<system>Jenkins</system>
+		<url>https://code.xeomar.com/build</url>
+	</ciManagement>
+
+	<build>
+
+		<sourceDirectory>source/main/java</sourceDirectory>
+		<outputDirectory>target/main/java</outputDirectory>
+		<testSourceDirectory>source/test/java</testSourceDirectory>
+		<testOutputDirectory>target/test/java</testOutputDirectory>
+
+		<resources>
+			<resource>
+				<directory>source/main/resources</directory>
+			</resource>
+		</resources>
+
+		<testResources>
+			<testResource>
+				<directory>source/test/resources</directory>
+			</testResource>
+		</testResources>
+
+		<pluginManagement>
+
+			<plugins>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.6.1</version>
+					<configuration>
+						<source>9</source>
+						<target>9</target>
+						<encoding>UTF-8</encoding>
+					</configuration>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<configuration>
+						<systemProperties>
+							<property>
+								<!-- This is a workaround for a conflict with Cisco AnyConnect VPN client. -->
+								<name>java.net.preferIPv4Stack</name>
+								<value>true</value>
+							</property>
+						</systemProperties>
+					</configuration>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-resources-plugin</artifactId>
+					<configuration>
+						<encoding>UTF-8</encoding>
+					</configuration>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-jar-plugin</artifactId>
+					<version>3.0.2</version>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-war-plugin</artifactId>
+					<configuration>
+						<warSourceDirectory>source/main/webapp</warSourceDirectory>
+					</configuration>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-site-plugin</artifactId>
+					<configuration>
+						<siteDirectory>source/site</siteDirectory>
+					</configuration>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-deploy-plugin</artifactId>
+					<version>2.7</version>
+					<extensions>true</extensions>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-release-plugin</artifactId>
+					<version>2.3.2</version>
+					<extensions>true</extensions>
+				</plugin>
+
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>buildnumber-maven-plugin</artifactId>
+					<version>1.1</version>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.tomcat.maven</groupId>
+					<artifactId>tomcat7-maven-plugin</artifactId>
+					<version>2.2</version>
+				</plugin>
+
+			</plugins>
+
+		</pluginManagement>
+
+	</build>
+
+	<distributionManagement>
+		<repository>
+			<id>xeo-release</id>
+			<url>https://code.xeomar.com/repo/xeo-release/</url>
+		</repository>
+
+		<snapshotRepository>
+			<id>xeo-snapshot</id>
+			<url>https://code.xeomar.com/repo/xeo-snapshot/</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+	<profiles>
+
+		<profile>
+			<id>platform-build</id>
+
+			<activation>
+				<property>
+					<name>env.platform</name>
+					<value>build</value>
+				</property>
+			</activation>
+
+			<distributionManagement>
+				<repository>
+					<id>xeo-release</id>
+					<url>http://localhost:8080/repo/xeo-release/</url>
+				</repository>
+
+				<snapshotRepository>
+					<id>xeo-snapshot</id>
+					<url>http://localhost:8080/repo/xeo-snapshot/</url>
+				</snapshotRepository>
+			</distributionManagement>
+		</profile>
+		
+	</profiles>
+	
+</project>

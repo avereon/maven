@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<assembly>
+	<id>product</id>
+	<formats>
+		<format>dir</format>
+	</formats>
+	<includeBaseDirectory>false</includeBaseDirectory>
+	<dependencySets>
+		<dependencySet>
+			<outputFileNameMapping>${artifact.artifactId}.${artifact.extension}</outputFileNameMapping>
+			<outputDirectory>/module</outputDirectory>
+			<scope>runtime</scope>
+		</dependencySet>
+	</dependencySets>
+	<fileSets>
+		<fileSet>
+			<directory>source/main/module</directory>
+			<outputDirectory>/module</outputDirectory>
+		</fileSet>
+	</fileSets>
+</assembly>

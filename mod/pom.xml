@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.xeomar.pom</groupId>
+		<artifactId>jar</artifactId>
+		<version>3.0.0-SNAPSHOT</version>
+		<relativePath>../jar</relativePath>
+	</parent>
+
+	<groupId>com.xeomar.pom</groupId>
+	<artifactId>mod</artifactId>
+	<packaging>pom</packaging>
+
+	<name>Xeomar Module POM</name>
+
+	<repositories>
+		<repository>
+			<id>xeo</id>
+			<url>https://code.xeomar.com/repo/xeo</url>
+		</repository>
+	</repositories>
+
+	<properties>
+		<product-artifact-name>product</product-artifact-name>
+		<package-stage-folder>package</package-stage-folder>
+	</properties>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>com.xeomar.xenon</groupId>
+			<artifactId>program</artifactId>
+			<version>${project.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+
+		<plugins>
+		
+			<!-- Generate the product pack. -->
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>module-assembly</id>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+						<configuration>
+							<attach>false</attach>
+							<descriptors>
+								<descriptor>module.xml</descriptor>
+							</descriptors>
+							<finalName>${product-artifact-name}</finalName>
+							<appendAssemblyId>false</appendAssemblyId>
+						</configuration>
+					</execution>
+					<execution>
+						<id>product-assembly</id>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+						<configuration>
+							<attach>false</attach>
+							<descriptors>
+								<descriptor>product.xml</descriptor>
+							</descriptors>
+							<finalName>${product-artifact-name}</finalName>
+							<appendAssemblyId>false</appendAssemblyId>
+						</configuration>
+					</execution>
+				</executions>
+				<dependencies>
+					<dependency>
+						<groupId>com.xeomar.pom</groupId>
+						<artifactId>asm</artifactId>
+						<version>3.0.0-SNAPSHOT</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+			
+			<!-- Copy the module meta file. -->
+			<!--
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+				<version>1.7</version>
+				<executions>
+					<execution>
+						<id>attach-artifacts</id>
+						<phase>package</phase>
+						<goals>
+							<goal>attach-artifact</goal>
+						</goals>
+						<configuration>
+							<artifacts>
+								<artifact>
+									<file>target/product.zip</file>
+									<classifier>${product-artifact-name}</classifier>
+									<type>zip</type>
+								</artifact>
+								<artifact>
+									<file>target/main/java/META-INF/product.yaml</file>
+									<classifier>${product-artifact-name}</classifier>
+									<type>xml</type>
+								</artifact>
+							</artifacts>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			-->
+
+		</plugins>
+
+	</build>
+	
+</project>
