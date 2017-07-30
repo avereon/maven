@@ -10,5 +10,5 @@ pipelines:
     - step:
         caches:
           - maven
-        script: # Modify the commands below to build your repository.
-          - mvn -B clean deploy # -B batch mode makes Maven less verbose
+        script:
+          - mvn -B clean deploy:deploy
