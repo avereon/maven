@@ -11,4 +11,4 @@ pipelines:
         caches:
           - maven
         script:
-          - mvn -B clean verify
+          - mvn -B clean install:install
