@@ -11,4 +11,10 @@ pipelines:
         caches:
           - maven
         script:
+          - wget https://dl.bintray.com/jfrog/jfrog-cli-go/1.7.1/jfrog-cli-linux-amd64/jfrog
+          - chmod +x jfrog
           - mvn -B clean install:install
+          - ./jfrog rt config --url $ARTIFACTORY_URL --user $ARTIFACTORY_USER --apikey $ARTIFACTORY_PASSWORD
+          - ./jfrog rt u "multi*/*.pom" pipeline-generic-local --build-name=pipeline-generic-artifactory --build-number=$BITBUCKET_COMMIT --flat=false
+          - ./jfrog rt bce pipeline-generic-artifactory $BITBUCKET_COMMIT
+          - ./jfrog rt bp pipeline-generic-artifactory $BITBUCKET_COMMIT
