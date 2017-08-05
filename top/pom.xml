@@ -14,20 +14,6 @@
 	<name>Xeomar Top POM</name>
 	<description>The top pom for all Xeomar projects using Maven.</description>
 	<inceptionYear>2017</inceptionYear>
-	
-	<repositories>
-		<repository>
-			<id>xeo</id>
-			<url>https://code.xeomar.com/repo/xeo</url>
-		</repository>
-	</repositories>
-
-	<pluginRepositories>
-		<pluginRepository>
-			<id>xeo-plugin</id>
-			<url>https://code.xeomar.com/repo/xeo</url>
-		</pluginRepository>
-	</pluginRepositories>
 
 	<organization>
 		<name>Xeomar</name>
@@ -47,6 +33,32 @@
 		<system>Jenkins</system>
 		<url>https://code.xeomar.com/build</url>
 	</ciManagement>
+	
+	<repositories>
+		<repository>
+			<id>xeo</id>
+			<url>https://code.xeomar.com/repo/xeo</url>
+		</repository>
+	</repositories>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>xeo-plugin</id>
+			<url>https://code.xeomar.com/repo/xeo</url>
+		</pluginRepository>
+	</pluginRepositories>
+
+	<distributionManagement>
+		<repository>
+			<id>xeo-release</id>
+			<url>https://code.xeomar.com/repo/xeo-release/</url>
+		</repository>
+
+		<snapshotRepository>
+			<id>xeo-snapshot</id>
+			<url>https://code.xeomar.com/repo/xeo-snapshot/</url>
+		</snapshotRepository>
+	</distributionManagement>
 
 	<build>
 
@@ -69,17 +81,25 @@
 
 		<pluginManagement>
 
-			<!-- The version number in this section are important. Default version numbers may not be acceptable. -->
+			<!-- 
+			From: https://maven.apache.org/guides/mini/guide-configuring-plugins.html
+			"It is recommended to always defined each version of the plugins used by 
+			the build to guarantee the build reproducibility. A good practice is to 
+			specify them in the <build><pluginManagement/></build> elements for each 
+			build plugin..."
+			-->
+
+			<!-- Version numbers updated 08 Aug 2017 -->
 
 			<plugins>
 
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
-					<version>3.6.1</version>
+					<version>3.6.2</version>
 					<configuration>
-						<source>9</source>
-						<target>9</target>
+						<source>8</source>
+						<target>8</target>
 						<encoding>UTF-8</encoding>
 					</configuration>
 				</plugin>
@@ -113,6 +133,12 @@
 					<artifactId>maven-jar-plugin</artifactId>
 					<version>3.0.2</version>
 				</plugin>
+				
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-jarsigner-plugin</artifactId>
+					<version>1.4</version>
+				</plugin>
 
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -131,18 +157,21 @@
 
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-site-plugin</artifactId>
-					<version>3.6</version>
-					<configuration>
-						<siteDirectory>source/site</siteDirectory>
-					</configuration>
+					<artifactId>maven-deploy-plugin</artifactId>
+					<version>2.8.2</version>
+					<extensions>true</extensions>
 				</plugin>
 
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-deploy-plugin</artifactId>
-					<version>1.3</version>
-					<extensions>true</extensions>
+					<artifactId>maven-source-plugin</artifactId>
+					<version>3.0.1</version>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-javadoc-plugin</artifactId>
+					<version>2.10.4</version>
 				</plugin>
 
 				<plugin>
@@ -163,43 +192,4 @@
 
 	</build>
 
-	<distributionManagement>
-		<repository>
-			<id>xeo-release</id>
-			<url>https://code.xeomar.com/repo/xeo-release/</url>
-		</repository>
-
-		<snapshotRepository>
-			<id>xeo-snapshot</id>
-			<url>https://code.xeomar.com/repo/xeo-snapshot/</url>
-		</snapshotRepository>
-	</distributionManagement>
-
-	<profiles>
-
-		<profile>
-			<id>platform-build</id>
-
-			<activation>
-				<property>
-					<name>env.platform</name>
-					<value>build</value>
-				</property>
-			</activation>
-
-			<distributionManagement>
-				<repository>
-					<id>xeo-release</id>
-					<url>http://localhost:8080/repo/xeo-release/</url>
-				</repository>
-
-				<snapshotRepository>
-					<id>xeo-snapshot</id>
-					<url>http://localhost:8080/repo/xeo-snapshot/</url>
-				</snapshotRepository>
-			</distributionManagement>
-		</profile>
-		
-	</profiles>
-	
 </project>

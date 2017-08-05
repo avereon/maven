@@ -2,7 +2,7 @@
 
 <settings>
 
-    <servers>
+	<servers>
 
 		<server>
 			<id>xeo-release</id>
@@ -16,6 +16,6 @@
 			<password>${ARTIFACTORY_PASSWORD}</password>
 		</server>
 
-    </servers>
+	</servers>
 
 </settings>
