@@ -36,7 +36,7 @@
 		<dependency>
 			<groupId>com.xeomar</groupId>
 			<artifactId>xenon</artifactId>
-			<version>${project.version}</version>
+			<version>LATEST</version>
 			<scope>provided</scope>
 		</dependency>
 
@@ -50,6 +50,14 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-assembly-plugin</artifactId>
+				<!-- Requires the assembly definitions in the asm artifact -->
+				<dependencies>
+					<dependency>
+						<groupId>com.xeomar.pom</groupId>
+						<artifactId>asm</artifactId>
+						<version>${project.version}</version>
+					</dependency>
+				</dependencies>
 				<executions>
 					<execution>
 						<id>module-assembly</id>
@@ -82,13 +90,6 @@
 						</configuration>
 					</execution>
 				</executions>
-				<dependencies>
-					<dependency>
-						<groupId>com.xeomar.pom</groupId>
-						<artifactId>asm</artifactId>
-						<version>${project.version}</version>
-					</dependency>
-				</dependencies>
 			</plugin>
 			
 			<!-- Copy the module meta file. -->
@@ -111,7 +112,7 @@
 									<type>zip</type>
 								</artifact>
 								<artifact>
-									<file>target/main/java/META-INF/product.yaml</file>
+									<file>target/main/java/META-INF/product.properties</file>
 									<classifier>${product-artifact-name}</classifier>
 									<type>xml</type>
 								</artifact>
