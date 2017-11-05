@@ -76,8 +76,8 @@
 				</executions>
 				<configuration>
 					<keystore>${xeomar.keystore}</keystore>
-					<alias>software</alias>
-					<storepass>xeomar</storepass>
+					<alias>code</alias>
+					<storepass>{uPmyPxX34OIHpYzSnGBQSn5sIOSIYLmtyZBTqBA80QDQj3CZluDAjH4xdj6yTnVy}</storepass>
 					<verify>true</verify>
 				</configuration>
 			</plugin>
