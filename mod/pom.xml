@@ -112,7 +112,7 @@
 									<type>zip</type>
 								</artifact>
 								<artifact>
-									<file>target/main/java/META-INF/product.properties</file>
+									<file>target/main/java/META-INF/product.card</file>
 									<classifier>${product-artifact-name}</classifier>
 									<type>xml</type>
 								</artifact>
