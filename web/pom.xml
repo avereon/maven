@@ -20,15 +20,15 @@
 	<inceptionYear>2017</inceptionYear>
 	<url>http://www.xeomar.com/</url>
 
-	<organization>
-		<name>Xeomar</name>
-		<url>http://www.xeomar.com/</url>
-	</organization>
-
 	<properties>
 		<java.version>8</java.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
+
+	<organization>
+		<name>Xeomar</name>
+		<url>http://www.xeomar.com/</url>
+	</organization>
 
 	<repositories>
 		<repository>

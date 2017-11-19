@@ -16,6 +16,11 @@
 	<inceptionYear>2017</inceptionYear>
 	<url>http://www.xeomar.com/</url>
 
+	<properties>
+		<java.version>9</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
 	<organization>
 		<name>Xeomar</name>
 		<url>http://www.xeomar.com</url>
@@ -93,17 +98,6 @@
 			<!-- Version numbers updated 08 Aug 2017 -->
 
 			<plugins>
-
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-compiler-plugin</artifactId>
-					<version>3.6.2</version>
-					<configuration>
-						<source>9</source>
-						<target>9</target>
-						<encoding>UTF-8</encoding>
-					</configuration>
-				</plugin>
 
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
