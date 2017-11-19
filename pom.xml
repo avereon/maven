@@ -26,6 +26,7 @@
 		<module>jar</module>
 		<module>asm</module>
 		<module>mod</module>
+		<module>web</module>
 	</modules>
 
 	<distributionManagement>

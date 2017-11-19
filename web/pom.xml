@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.5.8.RELEASE</version>
+	</parent>
+
+	<groupId>com.xeomar.pom</groupId>
+	<artifactId>web</artifactId>
+	<version>3.0.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<name>Xeomar Web POM</name>
+	<description>The web pom for all Xeomar web projects using Maven</description>
+	<inceptionYear>2017</inceptionYear>
+	<url>http://www.xeomar.com/</url>
+
+	<organization>
+		<name>Xeomar</name>
+		<url>http://www.xeomar.com/</url>
+	</organization>
+
+	<properties>
+		<java.version>8</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<repositories>
+		<repository>
+			<id>xeo</id>
+			<url>https://code.xeomar.com/repo/xeo</url>
+		</repository>
+	</repositories>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>xeo-plugin</id>
+			<url>https://code.xeomar.com/repo/xeo</url>
+		</pluginRepository>
+	</pluginRepositories>
+
+	<distributionManagement>
+		<repository>
+			<id>xeo-release</id>
+			<url>https://code.xeomar.com/repo/xeo-release/</url>
+		</repository>
+
+		<snapshotRepository>
+			<id>xeo-snapshot</id>
+			<url>https://code.xeomar.com/repo/xeo-snapshot/</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<sourceDirectory>source/main/java</sourceDirectory>
+		<outputDirectory>target/main/java</outputDirectory>
+		<testSourceDirectory>source/test/java</testSourceDirectory>
+		<testOutputDirectory>target/test/java</testOutputDirectory>
+
+		<resources>
+			<resource>
+				<directory>source/main/resources</directory>
+			</resource>
+		</resources>
+
+		<testResources>
+			<testResource>
+				<directory>source/test/resources</directory>
+			</testResource>
+		</testResources>
+
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+	<profiles>
+
+		<profile>
+			<id>local</id>
+
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+
+			<build>
+				<plugins>
+
+					<plugin>
+						<groupId>org.apache.tomcat.maven</groupId>
+						<artifactId>tomcat7-maven-plugin</artifactId>
+						<version>2.2</version>
+						<configuration>
+							<url>http://localhost:8080/manager/text</url>
+							<server>local-tomcat</server>
+							<path>/xeomar</path>
+							<warFile>target/${project.build.finalName}.war</warFile>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+
+		<profile>
+			<id>production</id>
+
+			<build>
+				<plugins>
+
+					<plugin>
+						<groupId>org.apache.tomcat.maven</groupId>
+						<artifactId>tomcat7-maven-plugin</artifactId>
+						<version>2.2</version>
+						<configuration>
+							<url>http://www.xeomar.com/manager/text</url>
+							<server>psm-tomcat</server>
+							<path>/</path>
+							<warFile>target/${project.build.finalName}.war</warFile>
+						</configuration>
+					</plugin>
+
+				</plugins>
+			</build>
+		</profile>
+
+	</profiles>
+
+</project>
+
