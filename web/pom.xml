@@ -241,7 +241,7 @@
 						<version>2.2</version>
 						<configuration>
 							<url>http://www.xeomar.com/manager/text</url>
-							<server>psm-tomcat</server>
+							<server>xeo-tomcat</server>
 							<path>/</path>
 							<warFile>target/${project.build.finalName}.war</warFile>
 						</configuration>
