@@ -19,7 +19,10 @@
 	<properties>
 		<java.version>9</java.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.build.timestamp.format>yyyy-MM-dd HH:mm:ss</maven.build.timestamp.format>
+		<project.timestamp>${maven.build.timestamp}</project.timestamp>
 	</properties>
+
 
 	<organization>
 		<name>Xeomar</name>

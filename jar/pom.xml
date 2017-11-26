@@ -20,10 +20,6 @@
 	<name>Xeomar JAR POM</name>
 	<description>The parent POM for Xeomar JAR projects using Maven.</description>
 
-	<properties>
-		<maven.build.timestamp.format>yyyy-MM-dd HH:mm:ss</maven.build.timestamp.format>
-	</properties>
-
 	<repositories>
 		<repository>
 			<id>xeo</id>
