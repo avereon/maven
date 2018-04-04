@@ -23,7 +23,6 @@
 		<project.timestamp>${maven.build.timestamp}</project.timestamp>
 	</properties>
 
-
 	<organization>
 		<name>Xeomar</name>
 		<url>http://www.xeomar.com</url>
