@@ -17,7 +17,7 @@
 	<url>http://www.xeomar.com/</url>
 
 	<properties>
-		<java.version>9</java.version>
+		<java.version>11</java.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.build.timestamp.format>yyyy-MM-dd HH:mm:ss</maven.build.timestamp.format>
 		<project.timestamp>${maven.build.timestamp}</project.timestamp>
@@ -33,7 +33,7 @@
 			<name>Mark Soderquist</name>
 			<email>mark@xeomar.com</email>
 			<organization>Xeomar</organization>
-			<timezone>MDT</timezone>
+			<timezone>MST</timezone>
 		</developer>
 	</developers>
 
@@ -97,14 +97,14 @@
 			build plugin..."
 			-->
 
-			<!-- Version numbers updated 08 Aug 2017 -->
+			<!-- Version numbers updated 05 Oct 2018 -->
 
 			<plugins>
 
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
-					<version>3.6.2</version>
+					<version>3.8.0</version>
 					<configuration>
 						<source>${java.version}</source>
 						<target>${java.version}</target>
@@ -121,7 +121,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-resources-plugin</artifactId>
-					<version>3.0.2</version>
+					<version>3.1.0</version>
 					<configuration>
 						<encoding>UTF-8</encoding>
 					</configuration>
@@ -130,7 +130,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-jar-plugin</artifactId>
-					<version>3.0.2</version>
+					<version>3.1.0</version>
 				</plugin>
 				
 				<plugin>
@@ -142,13 +142,13 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-assembly-plugin</artifactId>
-					<version>3.0.0</version>
+					<version>3.1.0</version>
 				</plugin>
 
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-war-plugin</artifactId>
-					<version>3.1.0</version>
+					<version>3.2.2</version>
 					<configuration>
 						<warSourceDirectory>source/main/webapp</warSourceDirectory>
 					</configuration>
@@ -157,7 +157,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-deploy-plugin</artifactId>
-					<version>2.8.2</version>
+					<version>3.0.0-M1</version>
 					<extensions>true</extensions>
 				</plugin>
 
@@ -170,7 +170,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-javadoc-plugin</artifactId>
-					<version>2.10.4</version>
+					<version>3.0.1</version>
 				</plugin>
 
 				<plugin>
@@ -179,16 +179,46 @@
 					<version>1.4</version>
 				</plugin>
 
-				<plugin>
-					<groupId>org.apache.tomcat.maven</groupId>
-					<artifactId>tomcat7-maven-plugin</artifactId>
-					<version>2.2</version>
-				</plugin>
-
 			</plugins>
 
 		</pluginManagement>
 
 	</build>
+
+	<profiles>
+		<profile>
+			<id>linux</id>
+			<activation>
+				<os>
+					<name>linux</name>
+				</os>
+			</activation>
+			<properties>
+				<jlink.module.path>${java.home}/jmods:${basedir}/target/dependency/:${basedir}/target</jlink.module.path>
+			</properties>
+		</profile>
+		<profile>
+			<id>macosx</id>
+			<activation>
+				<os>
+					<name>mac os x</name>
+				</os>
+			</activation>
+			<properties>
+				<jlink.module.path>${java.home}/jmods:${basedir}/target/dependency/:${basedir}/target</jlink.module.path>
+			</properties>
+		</profile>
+		<profile>
+			<id>windows</id>
+			<activation>
+				<os>
+					<family>windows</family>
+				</os>
+			</activation>
+			<properties>
+				<jlink.module.path>${java.home}/jmods;${basedir}/target/dependency/;${basedir}/target</jlink.module.path>
+			</properties>
+		</profile>
+	</profiles>
 
 </project>
