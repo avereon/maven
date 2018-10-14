@@ -194,7 +194,7 @@
 
 	<profiles>
 		<profile>
-			<id>build</id>
+			<id>hudson</id>
 			<distributionManagement>
 				<repository>
 					<id>xeo-release</id>
