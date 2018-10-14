@@ -187,6 +187,25 @@
 
 	<profiles>
 		<profile>
+			<id>jenkins</id>
+			<activation>
+				<property>
+					<name>USER</name>
+					<value>jenkins</value>
+				</property>
+			</activation>
+			<distributionManagement>
+				<repository>
+					<id>xeo-release</id>
+					<url>http://localhost:8081/artifactory/xeo-release/</url>
+				</repository>
+				<snapshotRepository>
+					<id>xeo-snapshot</id>
+					<url>http://localhost:8081/artifactory/xeo-snapshot/</url>
+				</snapshotRepository>
+			</distributionManagement>
+		</profile>
+		<profile>
 			<id>linux</id>
 			<activation>
 				<os>
