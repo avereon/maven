@@ -13,7 +13,6 @@
 		<relativePath>../jar</relativePath>
 	</parent>
 
-	<groupId>com.xeomar.pom</groupId>
 	<artifactId>mod</artifactId>
 	<packaging>pom</packaging>
 
@@ -22,7 +21,7 @@
 	<repositories>
 		<repository>
 			<id>xeo</id>
-			<url>https://code.xeomar.com/repo/xeo</url>
+			<url>https://repo.xeomar.com/xeo</url>
 		</repository>
 	</repositories>
 
@@ -36,7 +35,7 @@
 		<dependency>
 			<groupId>com.xeomar</groupId>
 			<artifactId>xenon</artifactId>
-			<version>LATEST</version>
+			<version>[0.7-SNAPSHOT,)</version>
 			<scope>provided</scope>
 		</dependency>
 
