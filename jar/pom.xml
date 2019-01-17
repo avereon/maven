@@ -20,6 +20,10 @@
 	<name>Xeomar JAR POM</name>
 	<description>The parent POM for Xeomar JAR projects using Maven.</description>
 
+	<properties>
+		<junit.version>5.3.2</junit.version>
+	</properties>
+
 	<repositories>
 		<repository>
 			<id>xeo</id>
@@ -29,7 +33,21 @@
 
 	<dependencies>
 
-		<dependency>
+		<dependency><!-- this triggers junit5 mode of surefire plugin -->
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-engine</artifactId>
+			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency><!-- this triggers junit5 mode of surefire plugin -->
+			<groupId>org.junit.vintage</groupId>
+			<artifactId>junit-vintage-engine</artifactId>
+			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- <dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.12</version>
@@ -40,7 +58,7 @@
 					<artifactId>hamcrest-core</artifactId>
 				</exclusion>
 			</exclusions>
-		</dependency>
+		</dependency> -->
 
 		<dependency>
 			<groupId>org.hamcrest</groupId>
