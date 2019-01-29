@@ -54,7 +54,8 @@
 					<dependency>
 						<groupId>com.xeomar.pom</groupId>
 						<artifactId>asm</artifactId>
-						<version>${project.version}</version>
+						<version>${project.parent.version}</version>
+						<type>pom</type>
 					</dependency>
 				</dependencies>
 				<executions>
