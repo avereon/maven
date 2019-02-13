@@ -17,7 +17,7 @@
 	<artifactId>asm</artifactId>
 	<packaging>pom</packaging>
 
-	<name>Xeomar Module Assembly</name>
+	<name>Xeomar Assembly Parent POM</name>
 
 	<repositories>
 		<repository>
@@ -39,5 +39,5 @@
 		</resources>
 
 	</build>
-	
+
 </project>

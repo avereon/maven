@@ -16,7 +16,7 @@
 	<artifactId>mod</artifactId>
 	<packaging>pom</packaging>
 
-	<name>Xeomar Module POM</name>
+	<name>Xeomar Module Parent POM</name>
 
 	<repositories>
 		<repository>

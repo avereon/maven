@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Deploy: mvn deploy:deploy -->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.xeomar.pom</groupId>
+		<artifactId>jar</artifactId>
+		<version>3.0.0-SNAPSHOT</version>
+		<relativePath>../top</relativePath>
+	</parent>
+
+	<groupId>com.xeomar.pom</groupId>
+	<artifactId>prd</artifactId>
+	<packaging>pom</packaging>
+
+	<name>Xeomar Product Parent POM</name>
+	<description>The parent POM for Xeomar products using Maven.</description>
+
+	<repositories>
+		<repository>
+			<id>xeo</id>
+			<url>https://repo.xeomar.com/xeo</url>
+		</repository>
+	</repositories>
+
+	<build>
+
+		<resources>
+			<resource>
+				<directory>source/main/resources</directory>
+				<filtering>false</filtering>
+				<excludes>
+					<exclude>**/*.card</exclude>
+					<exclude>**/*.info</exclude>
+					<exclude>**/*.properties</exclude>
+					<exclude>**/*.yaml</exclude>
+				</excludes>
+			</resource>
+			<resource>
+				<directory>source/main/resources</directory>
+				<filtering>true</filtering>
+				<includes>
+					<include>**/*.card</include>
+					<include>**/*.info</include>
+					<include>**/*.properties</include>
+					<include>**/*.yaml</include>
+				</includes>
+			</resource>
+		</resources>
+
+		<plugins>
+
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<!-- Requires the assembly definitions in the asm artifact -->
+				<dependencies>
+					<dependency>
+						<groupId>com.xeomar.pom</groupId>
+						<artifactId>asm</artifactId>
+						<version>${project.parent.version}</version>
+						<type>pom</type>
+					</dependency>
+				</dependencies>
+				<executions>
+					<!-- The package resource is defined in the jar parent pom -->
+					<execution>
+						<id>assembly-product</id>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+						<configuration>
+							<appendAssemblyId>false</appendAssemblyId>
+							<finalName>${platform}-product</finalName>
+							<attach>false</attach>
+							<descriptors>
+								<descriptor>source/main/assembly/${platform}-product.xml</descriptor>
+							</descriptors>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+		</plugins>
+
+	</build>
+
+</project>

@@ -29,8 +29,9 @@
 
 	<modules>
 		<module>top</module>
-		<module>jar</module>
 		<module>asm</module>
+		<module>jar</module>
+		<module>prd</module>
 		<module>mod</module>
 		<module>web</module>
 	</modules>
@@ -46,5 +47,5 @@
 			<url>https://repo.xeomar.com/xeo-snapshot/</url>
 		</snapshotRepository>
 	</distributionManagement>
-	
+
 </project>

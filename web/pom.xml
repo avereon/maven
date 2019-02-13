@@ -16,7 +16,7 @@
 	<version>3.0.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
-	<name>Xeomar Web POM</name>
+	<name>Xeomar Web Parent POM</name>
 	<description>The web pom for all Xeomar web projects using Maven</description>
 	<inceptionYear>2017</inceptionYear>
 	<url>http://www.xeomar.com/</url>
