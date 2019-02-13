@@ -29,7 +29,6 @@
 
 	<modules>
 		<module>top</module>
-		<module>asm</module>
 		<module>jar</module>
 		<module>prd</module>
 		<module>mod</module>

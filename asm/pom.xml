@@ -10,14 +10,13 @@
 		<groupId>com.xeomar.pom</groupId>
 		<artifactId>top</artifactId>
 		<version>3.0.0-SNAPSHOT</version>
-		<relativePath></relativePath>
+		<relativePath/>
 	</parent>
 
-	<groupId>com.xeomar.pom</groupId>
 	<artifactId>asm</artifactId>
-	<packaging>pom</packaging>
+	<packaging>jar</packaging>
 
-	<name>Xeomar Assembly Parent POM</name>
+	<name>Xeomar Assembly Parent JAR</name>
 
 	<repositories>
 		<repository>
@@ -32,8 +31,8 @@
 			<resource>
 				<directory>source/main/assembly</directory>
 				<includes>
-					<include>**/product.yaml</include>
-					<include>**/module.yaml</include>
+					<include>**/product.xml</include>
+					<include>**/module.xml</include>
 				</includes>
 			</resource>
 		</resources>
