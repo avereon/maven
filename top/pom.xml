@@ -207,7 +207,7 @@
 				</os>
 			</activation>
 			<properties>
-				<platform>linux</platform>
+				<product.platform>linux</product.platform>
 				<jlink.module.path>${java.home}/jmods:${basedir}/target/dependency/:${basedir}/target</jlink.module.path>
 			</properties>
 		</profile>
@@ -219,7 +219,7 @@
 				</os>
 			</activation>
 			<properties>
-				<platform>macos</platform>
+				<product.platform>macos</product.platform>
 				<jlink.module.path>${java.home}/jmods:${basedir}/target/dependency/:${basedir}/target</jlink.module.path>
 			</properties>
 		</profile>
@@ -231,7 +231,7 @@
 				</os>
 			</activation>
 			<properties>
-				<platform>windows</platform>
+				<product.platform>windows</product.platform>
 				<jlink.module.path>${java.home}/jmods;${basedir}/target/dependency/;${basedir}/target</jlink.module.path>
 			</properties>
 		</profile>

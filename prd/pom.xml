@@ -75,10 +75,10 @@
 						</goals>
 						<configuration>
 							<appendAssemblyId>false</appendAssemblyId>
-							<finalName>${platform}-product</finalName>
+							<finalName>${product.platform}-product</finalName>
 							<attach>false</attach>
 							<descriptors>
-								<descriptor>source/main/assembly/${platform}-product.xml</descriptor>
+								<descriptor>source/main/assembly/${product.platform}-product.xml</descriptor>
 							</descriptors>
 						</configuration>
 					</execution>
