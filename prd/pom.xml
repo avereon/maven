@@ -20,6 +20,11 @@
 	<name>Xeomar Product Parent POM</name>
 	<description>The parent POM for Xeomar products using Maven.</description>
 
+	<properties>
+		<product-name>${project.name}</product-name>
+		<product-identifier>${project.artifactId}</product-identifier>
+	</properties>
+
 	<repositories>
 		<repository>
 			<id>xeo</id>
