@@ -83,6 +83,37 @@
 
 		<plugins>
 
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<!-- Requires the assembly definitions in the asm artifact -->
+				<dependencies>
+					<dependency>
+						<groupId>com.xeomar.pom</groupId>
+						<artifactId>asm</artifactId>
+						<version>${project.parent.version}</version>
+						<type>pom</type>
+					</dependency>
+				</dependencies>
+				<executions>
+					<!-- The package resource is defined in the jar parent pom -->
+					<execution>
+						<id>assembly-product</id>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+						<configuration>
+							<appendAssemblyId>false</appendAssemblyId>
+							<finalName>${platform}-product</finalName>
+							<attach>false</attach>
+							<descriptors>
+								<descriptor>source/main/assembly/${platform}-product.xml</descriptor>
+							</descriptors>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
 			<!-- <plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jarsigner-plugin</artifactId>

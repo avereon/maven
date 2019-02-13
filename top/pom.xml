@@ -27,7 +27,7 @@
 		<name>Xeomar</name>
 		<url>http://xeomar.com</url>
 	</organization>
-	
+
 	<developers>
 		<developer>
 			<name>Mark Soderquist</name>
@@ -41,7 +41,7 @@
 		<system>Jenkins</system>
 		<url>https://code.xeomar.com/build</url>
 	</ciManagement>
-	
+
 	<repositories>
 		<repository>
 			<id>xeo</id>
@@ -89,11 +89,11 @@
 
 		<pluginManagement>
 
-			<!-- 
+			<!--
 			From: https://maven.apache.org/guides/mini/guide-configuring-plugins.html
-			"It is recommended to always defined each version of the plugins used by 
-			the build to guarantee the build reproducibility. A good practice is to 
-			specify them in the <build><pluginManagement/></build> elements for each 
+			"It is recommended to always defined each version of the plugins used by
+			the build to guarantee the build reproducibility. A good practice is to
+			specify them in the <build><pluginManagement/></build> elements for each
 			build plugin..."
 			-->
 
@@ -132,7 +132,7 @@
 					<artifactId>maven-jar-plugin</artifactId>
 					<version>3.1.0</version>
 				</plugin>
-				
+
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-jarsigner-plugin</artifactId>
@@ -207,6 +207,7 @@
 				</os>
 			</activation>
 			<properties>
+				<platform>linux</platform>
 				<jlink.module.path>${java.home}/jmods:${basedir}/target/dependency/:${basedir}/target</jlink.module.path>
 			</properties>
 		</profile>
@@ -218,6 +219,7 @@
 				</os>
 			</activation>
 			<properties>
+				<platform>macos</platform>
 				<jlink.module.path>${java.home}/jmods:${basedir}/target/dependency/:${basedir}/target</jlink.module.path>
 			</properties>
 		</profile>
@@ -229,6 +231,7 @@
 				</os>
 			</activation>
 			<properties>
+				<platform>windows</platform>
 				<jlink.module.path>${java.home}/jmods;${basedir}/target/dependency/;${basedir}/target</jlink.module.path>
 			</properties>
 		</profile>
