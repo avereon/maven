@@ -16,7 +16,7 @@
 	<artifactId>asm</artifactId>
 	<packaging>jar</packaging>
 
-	<name>Xeomar Assembly JAR</name>
+	<name>Xeomar Assemblies</name>
 
 	<repositories>
 		<repository>
@@ -24,5 +24,16 @@
 			<url>https://repo.xeomar.com/xeo</url>
 		</repository>
 	</repositories>
+
+	<build>
+
+		<!-- The parent pom defines the resources in a different location -->
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+			</resource>
+		</resources>
+
+	</build>
 
 </project>
