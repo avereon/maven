@@ -27,14 +27,6 @@
 		</repository>
 	</repositories>
 
-	<modules>
-		<module>top</module>
-		<module>jar</module>
-		<module>prd</module>
-		<module>mod</module>
-		<module>web</module>
-	</modules>
-
 	<distributionManagement>
 		<repository>
 			<id>xeo-release</id>
@@ -46,5 +38,24 @@
 			<url>https://repo.xeomar.com/xeo-snapshot/</url>
 		</snapshotRepository>
 	</distributionManagement>
+
+	<profiles>
+		<profile>
+			<id>poms</id>
+			<modules>
+				<module>top</module>
+				<module>jar</module>
+				<module>prd</module>
+				<module>mod</module>
+				<module>web</module>
+			</modules>
+		</profile>
+		<profile>
+			<id>jars</id>
+			<modules>
+				<module>asm</module>
+			</modules>
+		</profile>
+	</profiles>
 
 </project>
