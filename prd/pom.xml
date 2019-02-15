@@ -83,7 +83,6 @@
 						<groupId>com.xeomar.pom</groupId>
 						<artifactId>asm</artifactId>
 						<version>${project.parent.version}</version>
-						<type>pom</type>
 					</dependency>
 				</dependencies>
 			</plugin>
