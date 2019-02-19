@@ -108,9 +108,6 @@
 								<id>assembly-product</id>
 								<configuration>
 									<finalName>${product.platform}-product</finalName>
-									<descriptors>
-										<descriptor>source/main/assembly/${product.platform}-product.xml</descriptor>
-									</descriptors>
 								</configuration>
 							</execution>
 						</executions>
