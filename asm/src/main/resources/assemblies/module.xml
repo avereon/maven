@@ -9,14 +9,14 @@
 	<dependencySets>
 		<dependencySet>
 			<outputFileNameMapping>${artifact.artifactId}.${artifact.extension}</outputFileNameMapping>
-			<outputDirectory>/module</outputDirectory>
+			<outputDirectory>module</outputDirectory>
 			<scope>runtime</scope>
 		</dependencySet>
 	</dependencySets>
 	<fileSets>
 		<fileSet>
 			<directory>source/main/module</directory>
-			<outputDirectory>/module</outputDirectory>
+			<outputDirectory>module</outputDirectory>
 		</fileSet>
 	</fileSets>
 </assembly>
