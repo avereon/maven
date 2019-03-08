@@ -2,7 +2,7 @@
 
 <!-- This must match the install descriptor except for the format -->
 <assembly>
-	<id>windows-product</id>
+	<id>product-windows</id>
 	<formats>
 		<format>jar</format>
 	</formats>
