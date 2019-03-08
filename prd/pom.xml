@@ -122,9 +122,9 @@
 							<execution>
 								<id>assembly-product</id>
 								<configuration>
-									<finalName>${product.platform}-product</finalName>
+									<finalName>product-${product.platform}</finalName>
 									<descriptorRefs>
-										<descriptorRef>${product.platform}-product</descriptorRef>
+										<descriptorRef>product-${product.platform}</descriptorRef>
 									</descriptorRefs>
 								</configuration>
 							</execution>
