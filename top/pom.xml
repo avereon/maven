@@ -21,6 +21,18 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.build.timestamp.format>yyyy-MM-dd HH:mm:ss</maven.build.timestamp.format>
 		<project.timestamp>${maven.build.timestamp}</project.timestamp>
+
+		<maven.buildnumber.version>1.4</maven.buildnumber.version>
+		<maven.compiler.version>3.8.0</maven.compiler.version>
+		<maven.resources.version>3.1.0</maven.resources.version>
+		<maven.surefire.version>3.0.0-M3</maven.surefire.version>
+		<maven.jar.version>3.1.0</maven.jar.version>
+		<maven.war.version>3.2.2</maven.war.version>
+		<maven.jarsigner.version>1.4</maven.jarsigner.version>
+		<maven.assembly.version>3.1.0</maven.assembly.version>
+		<maven.deploy.version>3.0.0-M1</maven.deploy.version>
+		<maven.source.version>3.0.1</maven.source.version>
+		<maven.javadoc.version>3.0.1</maven.javadoc.version>
 	</properties>
 
 	<organization>
@@ -104,7 +116,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
-					<version>3.8.0</version>
+					<version>${maven.compiler.version}</version>
 					<configuration>
 						<source>${java.version}</source>
 						<target>${java.version}</target>
@@ -115,40 +127,34 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-surefire-plugin</artifactId>
-					<version>3.0.0-M3</version>
+					<version>${maven.surefire.version}</version>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-failsave-plugin</artifactId>
+					<version>${maven.surefire.version}</version>
 				</plugin>
 
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-resources-plugin</artifactId>
-					<version>3.1.0</version>
+					<version>${maven.resources.version}</version>
 					<configuration>
-						<encoding>UTF-8</encoding>
+						<encoding>${project.build.sourceEncoding}</encoding>
 					</configuration>
 				</plugin>
 
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-jar-plugin</artifactId>
-					<version>3.1.0</version>
-				</plugin>
-
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-jarsigner-plugin</artifactId>
-					<version>1.4</version>
-				</plugin>
-
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-assembly-plugin</artifactId>
-					<version>3.1.0</version>
+					<version>${maven.jar.version}</version>
 				</plugin>
 
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-war-plugin</artifactId>
-					<version>3.2.2</version>
+					<version>${maven.war.version}</version>
 					<configuration>
 						<warSourceDirectory>source/main/webapp</warSourceDirectory>
 					</configuration>
@@ -156,27 +162,39 @@
 
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-jarsigner-plugin</artifactId>
+					<version>${maven.jarsigner.version}</version>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-assembly-plugin</artifactId>
+					<version>${maven.assembly.version}</version>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-deploy-plugin</artifactId>
-					<version>3.0.0-M1</version>
+					<version>${maven.deploy.version}</version>
 					<extensions>true</extensions>
 				</plugin>
 
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-source-plugin</artifactId>
-					<version>3.0.1</version>
+					<version>${maven.source.version}</version>
 				</plugin>
 
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-javadoc-plugin</artifactId>
-					<version>3.0.1</version>
+					<version>${maven.javadoc.version}</version>
 				</plugin>
 
 				<plugin>
 					<groupId>org.codehaus.mojo</groupId>
 					<artifactId>buildnumber-maven-plugin</artifactId>
-					<version>1.4</version>
+					<version>${maven.buildnumber.version}</version>
 				</plugin>
 
 			</plugins>
