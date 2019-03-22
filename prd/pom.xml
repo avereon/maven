@@ -17,7 +17,7 @@
 	<packaging>pom</packaging>
 
 	<name>Xeomar Product Parent POM</name>
-	<description>The parent POM for Xeomar products using Maven.</description>
+	<description>The parent POM for Xeomar programs and modules.</description>
 
 	<properties>
 		<product-name>${project.name}</product-name>
@@ -62,13 +62,14 @@
 					<artifactId>maven-assembly-plugin</artifactId>
 					<executions>
 						<execution>
+							<!-- Execution ids must match this id in child poms -->
 							<id>assembly-product</id>
 							<phase>package</phase>
 							<goals>
 								<goal>single</goal>
 							</goals>
 							<configuration>
-								<!-- final name should be defined in profiles -->
+								<!-- Final name should be defined in profiles -->
 								<appendAssemblyId>false</appendAssemblyId>
 								<attach>false</attach>
 							</configuration>
@@ -87,53 +88,5 @@
 		</pluginManagement>
 
 	</build>
-
-	<profiles>
-
-		<profile>
-			<id>platform-agnostic-assemblies</id>
-			<build>
-				<plugins>
-					<plugin>
-						<artifactId>maven-assembly-plugin</artifactId>
-						<executions>
-							<execution>
-								<id>assembly-product</id>
-								<configuration>
-									<finalName>product</finalName>
-									<descriptorRefs>
-										<descriptorRef>product</descriptorRef>
-									</descriptorRefs>
-								</configuration>
-							</execution>
-						</executions>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-
-		<profile>
-			<id>platform-specific-assemblies</id>
-			<build>
-				<plugins>
-					<plugin>
-						<artifactId>maven-assembly-plugin</artifactId>
-						<executions>
-							<execution>
-								<id>assembly-product</id>
-								<configuration>
-									<finalName>product</finalName>
-									<descriptorRefs>
-										<descriptorRef>product-${product.platform}</descriptorRef>
-									</descriptorRefs>
-								</configuration>
-							</execution>
-						</executions>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-
-	</profiles>
 
 </project>

@@ -10,14 +10,19 @@
 		<groupId>com.xeomar.pom</groupId>
 		<artifactId>prd</artifactId>
 		<version>3.0.0-SNAPSHOT</version>
-		<relativePath>../prd</relativePath>
+		<relativePath>../jar</relativePath>
 	</parent>
 
-	<artifactId>mod</artifactId>
+	<artifactId>prg</artifactId>
 	<packaging>pom</packaging>
 
-	<name>Xeomar Module Parent POM</name>
-	<description>The parent POM for Xeomar modules.</description>
+	<name>Xeomar Program Parent POM</name>
+	<description>The parent POM for Xeomar programs.</description>
+
+	<properties>
+		<product-name>${project.name}</product-name>
+		<product-identifier>${project.artifactId}</product-identifier>
+	</properties>
 
 	<repositories>
 		<repository>
@@ -25,17 +30,6 @@
 			<url>https://repo.xeomar.com/xeo</url>
 		</repository>
 	</repositories>
-
-	<dependencies>
-
-		<dependency>
-			<groupId>com.xeomar</groupId>
-			<artifactId>xenon</artifactId>
-			<version>[0.8-SNAPSHOT,)</version>
-			<scope>provided</scope>
-		</dependency>
-
-	</dependencies>
 
 	<profiles>
 
@@ -52,7 +46,7 @@
 								<configuration>
 									<finalName>product</finalName>
 									<descriptorRefs>
-										<descriptorRef>module</descriptorRef>
+										<descriptorRef>product</descriptorRef>
 									</descriptorRefs>
 								</configuration>
 							</execution>
@@ -75,7 +69,7 @@
 								<configuration>
 									<finalName>product</finalName>
 									<descriptorRefs>
-										<descriptorRef>module-${product.platform}</descriptorRef>
+										<descriptorRef>product-${product.platform}</descriptorRef>
 									</descriptorRefs>
 								</configuration>
 							</execution>

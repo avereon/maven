@@ -46,6 +46,7 @@
 				<module>top</module>
 				<module>jar</module>
 				<module>prd</module>
+				<module>prg</module>
 				<module>mod</module>
 				<module>web</module>
 			</modules>

@@ -10,6 +10,7 @@ define common configuration, resources and definitions for all Xeomar projects.
   - jar - The parent pom for jar projects and jar-like projects like products 
   and mods.
     - prd - The parent pom for products
+      - prg - The parent pom for programs
       - mod - The parent pom for modules
 - web - The parent pom of web projects. The parent of web projects is the 
   spring-boot-parent pom and not the Xeomar top pom.
