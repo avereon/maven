@@ -1,22 +1,23 @@
 <?xml version="1.0"?>
 
+
 <assembly>
 	<id>module</id>
 	<formats>
 		<format>jar</format>
 	</formats>
 	<includeBaseDirectory>false</includeBaseDirectory>
-	<dependencySets>
-		<dependencySet>
-			<outputFileNameMapping>${artifact.artifactId}.${artifact.extension}</outputFileNameMapping>
-			<outputDirectory>module</outputDirectory>
-			<scope>runtime</scope>
-		</dependencySet>
-	</dependencySets>
 	<fileSets>
 		<fileSet>
 			<directory>source/main/module</directory>
-			<outputDirectory>module</outputDirectory>
+			<outputDirectory/>
 		</fileSet>
 	</fileSets>
+	<dependencySets>
+		<dependencySet>
+			<outputFileNameMapping>${artifact.artifactId}.${artifact.extension}</outputFileNameMapping>
+			<outputDirectory/>
+			<scope>runtime</scope>
+		</dependencySet>
+	</dependencySets>
 </assembly>

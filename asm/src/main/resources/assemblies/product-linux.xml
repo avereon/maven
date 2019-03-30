@@ -10,7 +10,7 @@
 	<fileSets>
 		<fileSet>
 			<directory>target/jlink</directory>
-			<outputDirectory></outputDirectory>
+			<outputDirectory/>
 		</fileSet>
 		<fileSet>
 			<directory>source/main/assembly/resources</directory>
