@@ -26,7 +26,7 @@
 		<maven.compiler.version>3.8.0</maven.compiler.version>
 		<maven.resources.version>3.1.0</maven.resources.version>
 		<maven.surefire.version>3.0.0-M3</maven.surefire.version>
-		<maven.jar.version>3.1.0</maven.jar.version>
+		<maven.jar.version>3.1.2</maven.jar.version>
 		<maven.war.version>3.2.2</maven.war.version>
 		<maven.jarsigner.version>1.4</maven.jarsigner.version>
 		<maven.assembly.version>3.1.0</maven.assembly.version>
