@@ -10,7 +10,7 @@
 		<groupId>com.avereon.pom</groupId>
 		<artifactId>top</artifactId>
 		<version>3.0.0-SNAPSHOT</version>
-		<relativePath/>
+		<relativePath>../top</relativePath>
 	</parent>
 
 	<artifactId>asm</artifactId>
