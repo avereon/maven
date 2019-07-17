@@ -10,7 +10,7 @@
 		<groupId>com.avereon.pom</groupId>
 		<artifactId>prd</artifactId>
 		<version>3.0.0-SNAPSHOT</version>
-		<relativePath>../jar</relativePath>
+		<relativePath>../prd</relativePath>
 	</parent>
 
 	<artifactId>prg</artifactId>
