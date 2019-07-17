@@ -7,7 +7,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>com.xeomar.pom</groupId>
+		<groupId>com.avereon.pom</groupId>
 		<artifactId>jar</artifactId>
 		<version>3.0.0-SNAPSHOT</version>
 		<relativePath>jar</relativePath>
@@ -17,25 +17,25 @@
 	<version>3.0.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
-	<name>Xeomar Pom Aggregator</name>
+	<name>Avereon Pom Aggregator</name>
 	<inceptionYear>2017</inceptionYear>
 
 	<repositories>
 		<repository>
-			<id>xeo</id>
-			<url>https://repo.xeomar.com/xeo</url>
+			<id>avn</id>
+			<url>https://repo.avereon.com/avn</url>
 		</repository>
 	</repositories>
 
 	<distributionManagement>
 		<repository>
-			<id>xeo-release</id>
-			<url>https://repo.xeomar.com/xeo-release/</url>
+			<id>avn-release</id>
+			<url>https://repo.avereon.com/avn-release/</url>
 		</repository>
 
 		<snapshotRepository>
-			<id>xeo-snapshot</id>
-			<url>https://repo.xeomar.com/xeo-snapshot/</url>
+			<id>avn-snapshot</id>
+			<url>https://repo.avereon.com/avn-snapshot/</url>
 		</snapshotRepository>
 	</distributionManagement>
 

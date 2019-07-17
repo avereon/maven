@@ -11,15 +11,15 @@
 		<relativePath></relativePath>
 	</parent>
 
-	<groupId>com.xeomar.pom</groupId>
+	<groupId>com.avereon.pom</groupId>
 	<artifactId>web</artifactId>
 	<version>3.0.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
-	<name>Xeomar Web Parent POM</name>
-	<description>The web pom for all Xeomar web projects using Maven</description>
+	<name>Avereon Web Parent POM</name>
+	<description>The web pom for all Avereon web projects using Maven</description>
 	<inceptionYear>2017</inceptionYear>
-	<url>http://www.xeomar.com/</url>
+	<url>http://www.avereon.com/</url>
 
 	<properties>
 		<java.version>11</java.version>
@@ -28,33 +28,33 @@
 	</properties>
 
 	<organization>
-		<name>Xeomar</name>
-		<url>http://www.xeomar.com/</url>
+		<name>Avereon</name>
+		<url>http://www.avereon.com/</url>
 	</organization>
 
 	<repositories>
 		<repository>
-			<id>xeo</id>
-			<url>https://repo.xeomar.com/xeo</url>
+			<id>avn</id>
+			<url>https://repo.avereon.com/avn</url>
 		</repository>
 	</repositories>
 
 	<pluginRepositories>
 		<pluginRepository>
-			<id>xeo-plugin</id>
-			<url>https://repo.xeomar.com/xeo</url>
+			<id>avn-plugin</id>
+			<url>https://repo.avereon.com/avn</url>
 		</pluginRepository>
 	</pluginRepositories>
 
 	<distributionManagement>
 		<repository>
-			<id>xeo-release</id>
-			<url>https://repo.xeomar.com/xeo-release/</url>
+			<id>avn-release</id>
+			<url>https://repo.avereon.com/avn-release/</url>
 		</repository>
 
 		<snapshotRepository>
-			<id>xeo-snapshot</id>
-			<url>https://repo.xeomar.com/xeo-snapshot/</url>
+			<id>avn-snapshot</id>
+			<url>https://repo.avereon.com/avn-snapshot/</url>
 		</snapshotRepository>
 	</distributionManagement>
 
@@ -244,7 +244,7 @@
 						<configuration>
 							<url>http://localhost:8080/manager/text</url>
 							<server>local-tomcat</server>
-							<path>/xeomar</path>
+							<path>/avereon</path>
 							<warFile>target/${project.build.finalName}.war</warFile>
 						</configuration>
 					</plugin>
@@ -262,8 +262,8 @@
 						<groupId>org.apache.tomcat.maven</groupId>
 						<artifactId>tomcat7-maven-plugin</artifactId>
 						<configuration>
-							<url>http://www.xeomar.com/manager/text</url>
-							<server>xeo-tomcat</server>
+							<url>http://www.avereon.com/manager/text</url>
+							<server>avn-tomcat</server>
 							<path>/</path>
 							<warFile>target/${project.build.finalName}.war</warFile>
 						</configuration>

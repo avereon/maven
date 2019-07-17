@@ -7,7 +7,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>com.xeomar.pom</groupId>
+		<groupId>com.avereon.pom</groupId>
 		<artifactId>prd</artifactId>
 		<version>3.0.0-SNAPSHOT</version>
 		<relativePath>../jar</relativePath>
@@ -16,8 +16,8 @@
 	<artifactId>prg</artifactId>
 	<packaging>pom</packaging>
 
-	<name>Xeomar Program Parent POM</name>
-	<description>The parent POM for Xeomar programs.</description>
+	<name>Avereon Program Parent POM</name>
+	<description>The parent POM for Avereon programs.</description>
 
 	<properties>
 		<product-name>${project.name}</product-name>
@@ -26,8 +26,8 @@
 
 	<repositories>
 		<repository>
-			<id>xeo</id>
-			<url>https://repo.xeomar.com/xeo</url>
+			<id>avn</id>
+			<url>https://repo.avereon.com/avn</url>
 		</repository>
 	</repositories>
 

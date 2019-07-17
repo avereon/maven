@@ -1,7 +1,7 @@
-# Xeomar Maven Parent POMs
+# Avereon Maven Parent POMs
 
-This project maintains the parent poms used by the Xeomar group. The parent poms
-define common configuration, resources and definitions for all Xeomar projects.
+This project maintains the parent poms used by the Avereon group. The parent poms
+define common configuration, resources and definitions for all Avereon projects.
 
 ## POM Hierarchy
 
@@ -13,7 +13,7 @@ define common configuration, resources and definitions for all Xeomar projects.
       - prg - The parent pom for programs
       - mod - The parent pom for modules
 - web - The parent pom of web projects. The parent of web projects is the 
-  spring-boot-parent pom and not the Xeomar top pom.
+  spring-boot-parent pom and not the Avereon top pom.
 
 ## Builds
 

@@ -6,15 +6,15 @@
 
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.xeomar.pom</groupId>
+	<groupId>com.avereon.pom</groupId>
 	<artifactId>top</artifactId>
 	<version>3.0.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
-	<name>Xeomar Top Parent POM</name>
-	<description>The top pom for all Xeomar projects using Maven.</description>
+	<name>Avereon Top Parent POM</name>
+	<description>The top pom for all Avereon projects using Maven.</description>
 	<inceptionYear>2017</inceptionYear>
-	<url>http://www.xeomar.com/</url>
+	<url>http://www.avereon.com/</url>
 
 	<properties>
 		<java.version>11</java.version>
@@ -36,47 +36,47 @@
 	</properties>
 
 	<organization>
-		<name>Xeomar</name>
-		<url>http://xeomar.com</url>
+		<name>Avereon</name>
+		<url>http://avereon.com</url>
 	</organization>
 
 	<developers>
 		<developer>
 			<name>Mark Soderquist</name>
-			<email>mark@xeomar.com</email>
-			<organization>Xeomar</organization>
+			<email>mark@avereon.com</email>
+			<organization>Avereon</organization>
 			<timezone>MST</timezone>
 		</developer>
 	</developers>
 
 	<ciManagement>
 		<system>Jenkins</system>
-		<url>https://code.xeomar.com/build</url>
+		<url>https://code.avereon.com/build</url>
 	</ciManagement>
 
 	<repositories>
 		<repository>
-			<id>xeo</id>
-			<url>https://repo.xeomar.com/xeo</url>
+			<id>avn</id>
+			<url>https://repo.avereon.com/avn</url>
 		</repository>
 	</repositories>
 
 	<pluginRepositories>
 		<pluginRepository>
-			<id>xeo-plugin</id>
-			<url>https://repo.xeomar.com/xeo</url>
+			<id>avn-plugin</id>
+			<url>https://repo.avereon.com/avn</url>
 		</pluginRepository>
 	</pluginRepositories>
 
 	<distributionManagement>
 		<repository>
-			<id>xeo-release</id>
-			<url>https://repo.xeomar.com/xeo-release/</url>
+			<id>avn-release</id>
+			<url>https://repo.avereon.com/avn-release/</url>
 		</repository>
 
 		<snapshotRepository>
-			<id>xeo-snapshot</id>
-			<url>https://repo.xeomar.com/xeo-snapshot/</url>
+			<id>avn-snapshot</id>
+			<url>https://repo.avereon.com/avn-snapshot/</url>
 		</snapshotRepository>
 	</distributionManagement>
 
@@ -208,12 +208,12 @@
 			<id>ci</id>
 			<distributionManagement>
 				<repository>
-					<id>xeo-release</id>
-					<url>http://localhost:8081/artifactory/xeo-release/</url>
+					<id>avn-release</id>
+					<url>http://localhost:8081/artifactory/avn-release/</url>
 				</repository>
 				<snapshotRepository>
-					<id>xeo-snapshot</id>
-					<url>http://localhost:8081/artifactory/xeo-snapshot/</url>
+					<id>avn-snapshot</id>
+					<url>http://localhost:8081/artifactory/avn-snapshot/</url>
 				</snapshotRepository>
 			</distributionManagement>
 		</profile>
