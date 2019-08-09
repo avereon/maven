@@ -65,6 +65,9 @@
 		<pluginRepository>
 			<id>avn-plugin</id>
 			<url>https://repo.avereon.com/avn</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
 		</pluginRepository>
 	</pluginRepositories>
 
