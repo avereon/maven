@@ -4,6 +4,8 @@ cache:
   directories:
     - $HOME/.m2
 
+install: skip
+
 script:
   - mvn --settings .travis/settings.xml -B -P poms -U help:active-profiles clean deploy:deploy
   - mvn --settings .travis/settings.xml -B -P jars -U help:active-profiles clean deploy
