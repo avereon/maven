@@ -5,5 +5,5 @@ cache:
     - $HOME/.m2
 
 script:
-  - mvn --settings .travis/settings.xml -B -P poms -U help:active-profiles clean install:install
-  - mvn --settings .travis/settings.xml -B -P jars -U help:active-profiles clean install
+  - mvn --settings .travis/settings.xml -B -P poms -U help:active-profiles clean deploy:deploy
+  - mvn --settings .travis/settings.xml -B -P jars -U help:active-profiles clean deploy
