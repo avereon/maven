@@ -1,4 +1,6 @@
-# Avereon Maven Parent POMs
+[build-status]: https://travis-ci.org/avereon/maven.svg?branch=master "Build status"
+
+# Avereon Maven Parent POMs ![alt text][build-status]
 
 This project maintains the parent poms used by the Avereon group. The parent poms
 define common configuration, resources and definitions for all Avereon projects.
