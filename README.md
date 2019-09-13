@@ -1,4 +1,4 @@
-[build-status]: https://travis-ci.org/avereon/maven.svg?branch=master "Build status"
+[build-status]: https://github.com/avereon/maven/workflows/Avereon%20Maven%20CI/badge.svg "Build status"
 
 # Avereon Maven Parent POMs ![alt text][build-status]
 
