@@ -13,6 +13,12 @@ jobs:
         with:
           java-version: 11
       - name: Deploy POMS
-        run: mvn --settings .travis/settings.xml -B -P poms -U help:active-profiles clean deploy:deploy
+        env:
+          AVN_REPO_USERNAME: ${{ secrets.AVN_REPO_USERNAME }}
+          AVN_REPO_PASSWORD: ${{ secrets.AVN_REPO_PASSWORD }}
+        run: mvn --settings .github/settings.xml -B -P poms -U help:active-profiles clean deploy:deploy
       - name: Deploy JARS
-        run: mvn --settings .travis/settings.xml -B -P jars -U help:active-profiles clean deploy
+        env:
+          AVN_REPO_USERNAME: ${{ secrets.AVN_REPO_USERNAME }}
+          AVN_REPO_PASSWORD: ${{ secrets.AVN_REPO_PASSWORD }}
+        run: mvn --settings .github/settings.xml -B -P jars -U help:active-profiles clean deploy
