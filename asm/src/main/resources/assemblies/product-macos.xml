@@ -16,7 +16,7 @@
 			<directory>target/main/images</directory>
 			<outputDirectory>bin</outputDirectory>
 			<includes>
-				<include>${artifact.artifactId}.*</include>
+				<include>${project.artifactId}.*</include>
 			</includes>
 		</fileSet>
 		<fileSet>
@@ -36,9 +36,25 @@
 			<fileMode>0755</fileMode>
 		</file>
 		<file>
-			<source>target/jlink/bin/xenon</source>
+			<source>target/jlink/bin/${project.artifactId}</source>
 			<outputDirectory>bin</outputDirectory>
 			<fileMode>0755</fileMode>
+		</file>
+		<file>
+			<source>source/main/assembly/macos/Info.plist</source>
+			<outputDirectory/>
+			<filtered>true</filtered>
+			<fileMode>0644</fileMode>
+		</file>
+		<file>
+			<source>source/main/assembly/macos/${project.artifactId}</source>
+			<outputDirectory>MacOS</outputDirectory>
+			<fileMode>0755</fileMode>
+		</file>
+		<file>
+			<source>target/main/images/${project.artifactId}.png</source>
+			<outputDirectory>Resources</outputDirectory>
+			<fileMode>0644</fileMode>
 		</file>
 	</files>
 </assembly>
