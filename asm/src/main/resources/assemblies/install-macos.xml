@@ -10,50 +10,50 @@
 	<fileSets>
 		<fileSet>
 			<directory>target/jlink</directory>
-			<outputDirectory/>
+			<outputDirectory>${project.name}.app/Contents</outputDirectory>
 		</fileSet>
 		<fileSet>
 			<directory>target/main/images</directory>
-			<outputDirectory>bin</outputDirectory>
+			<outputDirectory>${project.name}.app/Contents/bin</outputDirectory>
 			<includes>
 				<include>${project.artifactId}.*</include>
 			</includes>
 		</fileSet>
 		<fileSet>
 			<directory>source/main/assembly/resources</directory>
-			<outputDirectory>bin</outputDirectory>
+			<outputDirectory>${project.name}.app/Contents/bin</outputDirectory>
 		</fileSet>
 	</fileSets>
 	<files>
 		<file>
 			<source>target/jlink/bin/java</source>
-			<outputDirectory>bin</outputDirectory>
+			<outputDirectory>${project.name}.app/Contents/bin</outputDirectory>
 			<fileMode>0755</fileMode>
 		</file>
 		<file>
 			<source>target/jlink/bin/keytool</source>
-			<outputDirectory>bin</outputDirectory>
+			<outputDirectory>${project.name}.app/Contents/bin</outputDirectory>
 			<fileMode>0755</fileMode>
 		</file>
 		<file>
 			<source>target/jlink/bin/${project.artifactId}</source>
-			<outputDirectory>bin</outputDirectory>
+			<outputDirectory>${project.name}.app/Contents/bin</outputDirectory>
 			<fileMode>0755</fileMode>
 		</file>
 		<file>
 			<source>source/main/assembly/macos/Info.plist</source>
-			<outputDirectory/>
+			<outputDirectory>${project.name}.app/Contents</outputDirectory>
 			<filtered>true</filtered>
 			<fileMode>0644</fileMode>
 		</file>
 		<file>
 			<source>source/main/assembly/macos/${project.artifactId}</source>
-			<outputDirectory>MacOS</outputDirectory>
+			<outputDirectory>${project.name}.app/Contents/MacOS</outputDirectory>
 			<fileMode>0755</fileMode>
 		</file>
 		<file>
 			<source>target/main/images/${project.artifactId}.png</source>
-			<outputDirectory>Resources</outputDirectory>
+			<outputDirectory>${project.name}.app/Contents/Resources</outputDirectory>
 			<fileMode>0644</fileMode>
 		</file>
 	</files>
