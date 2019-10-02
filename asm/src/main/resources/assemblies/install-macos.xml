@@ -1,6 +1,10 @@
 <?xml version="1.0"?>
 
-<!-- This must match the product descriptor except for the format. -->
+<!-- Generally this descriptor must match the product descriptor except for the
+format. However, due to the fact that Mac OS wants applications to be installed
+in the /Applications folder and with a specific structure, that structure is
+defined in this descriptor, but not in the product descriptor. Note that all
+paths in this descriptor start with ${project.name}.app/Contents/.-->
 <assembly>
 	<id>install-macos</id>
 	<formats>
