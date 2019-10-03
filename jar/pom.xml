@@ -60,7 +60,7 @@
 
 		<plugins>
 
-			<!-- <plugin>
+			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jarsigner-plugin</artifactId>
 				<executions>
@@ -73,10 +73,10 @@
 				</executions>
 				<configuration>
 					<keystore>${avereon.keystore}</keystore>
+					<storepass>${avereon.keystore.password}</storepass>
 					<alias>code</alias>
-					<storepass>{uPmyPxX34OIHpYzSnGBQSn5sIOSIYLmtyZBTqBA80QDQj3CZluDAjH4xdj6yTnVy}</storepass>
 				</configuration>
-			</plugin> -->
+			</plugin>
 
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
