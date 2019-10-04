@@ -57,27 +57,7 @@
 	</dependencies>
 
 	<build>
-
 		<plugins>
-
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-jarsigner-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>sign</id>
-						<goals>
-							<goal>sign</goal>
-						</goals>
-					</execution>
-				</executions>
-				<configuration>
-					<keystore>${avereon.keystore}</keystore>
-					<storepass>${avereon.keystore.password}</storepass>
-					<alias>code</alias>
-				</configuration>
-			</plugin>
-
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-source-plugin</artifactId>
@@ -90,12 +70,11 @@
 					</execution>
 				</executions>
 			</plugin>
-
 		</plugins>
-
 	</build>
 
 	<profiles>
+
 		<profile>
 			<id>failsafe</id>
 			<build>
@@ -115,6 +94,32 @@
 				</plugins>
 			</build>
 		</profile>
+
+		<profile>
+			<id>signjar</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-jarsigner-plugin</artifactId>
+						<executions>
+							<execution>
+								<id>sign</id>
+								<goals>
+									<goal>sign</goal>
+								</goals>
+							</execution>
+						</executions>
+						<configuration>
+							<keystore>${jarsigner.keystore}</keystore>
+							<storepass>${jarsigner.keystore.password}</storepass>
+							<alias>code</alias>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+
 	</profiles>
 
 </project>
