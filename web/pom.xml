@@ -19,7 +19,7 @@
 	<name>Avereon Web Parent POM</name>
 	<description>The web pom for all Avereon web projects using Maven</description>
 	<inceptionYear>2017</inceptionYear>
-	<url>http://www.avereon.com/</url>
+	<url>https://www.avereon.com/</url>
 
 	<properties>
 		<java.version>11</java.version>
@@ -29,7 +29,7 @@
 
 	<organization>
 		<name>Avereon</name>
-		<url>http://www.avereon.com/</url>
+		<url>https://www.avereon.com/</url>
 	</organization>
 
 	<repositories>
@@ -226,54 +226,4 @@
 
 	</build>
 
-	<profiles>
-
-		<profile>
-			<id>local</id>
-
-			<activation>
-				<activeByDefault>true</activeByDefault>
-			</activation>
-
-			<build>
-				<plugins>
-
-					<plugin>
-						<groupId>org.apache.tomcat.maven</groupId>
-						<artifactId>tomcat7-maven-plugin</artifactId>
-						<configuration>
-							<url>http://localhost:8080/manager/text</url>
-							<server>local-tomcat</server>
-							<path>/avereon</path>
-							<warFile>target/${project.build.finalName}.war</warFile>
-						</configuration>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-
-		<profile>
-			<id>production</id>
-
-			<build>
-				<plugins>
-
-					<plugin>
-						<groupId>org.apache.tomcat.maven</groupId>
-						<artifactId>tomcat7-maven-plugin</artifactId>
-						<configuration>
-							<url>http://www.avereon.com/manager/text</url>
-							<server>avn-tomcat</server>
-							<path>/</path>
-							<warFile>target/${project.build.finalName}.war</warFile>
-						</configuration>
-					</plugin>
-
-				</plugins>
-			</build>
-		</profile>
-
-	</profiles>
-
 </project>
-
