@@ -16,12 +16,12 @@
 			<directory>target/main/images</directory>
 			<outputDirectory>bin</outputDirectory>
 			<includes>
-				<include>${artifact.artifactId}.*</include>
+				<include>${project.artifactId}.*</include>
 			</includes>
 		</fileSet>
 		<fileSet>
 			<directory>source/main/assembly/resources</directory>
-			<outputDirectory>bin</outputDirectory>
+			<outputDirectory/>
 		</fileSet>
 	</fileSets>
 	<files>
@@ -36,7 +36,7 @@
 			<fileMode>0755</fileMode>
 		</file>
 		<file>
-			<source>target/jlink/bin/xenon</source>
+			<source>target/jlink/bin/${project.artifactId}</source>
 			<outputDirectory>bin</outputDirectory>
 			<fileMode>0755</fileMode>
 		</file>

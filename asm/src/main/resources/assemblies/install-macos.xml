@@ -25,7 +25,7 @@ paths in this descriptor start with ${project.name}.app/Contents/.-->
 		</fileSet>
 		<fileSet>
 			<directory>source/main/assembly/resources</directory>
-			<outputDirectory>${project.name}.app/Contents/bin</outputDirectory>
+			<outputDirectory>${project.name}.app/Contents</outputDirectory>
 		</fileSet>
 	</fileSets>
 	<files>

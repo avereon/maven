@@ -21,7 +21,7 @@
 		</fileSet>
 		<fileSet>
 			<directory>source/main/assembly/resources</directory>
-			<outputDirectory>bin</outputDirectory>
+			<outputDirectory/>
 		</fileSet>
 	</fileSets>
 	<files>

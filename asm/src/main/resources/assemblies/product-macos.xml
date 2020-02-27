@@ -4,7 +4,7 @@
 <!-- Generally this descriptor must match the install descriptor except for the
 format. However, due to the fact that Mac OS wants programs to be installed in
 the /Applications folder with a specific structure, that structure is defined in
-this install descriptor, but not in this descriptor. Note that all paths in this
+the install descriptor, but not in this descriptor. Note that all paths in this
 descriptor *do not* start with ${project.name}.app/Contents/.-->
 
 <assembly>
@@ -27,7 +27,7 @@ descriptor *do not* start with ${project.name}.app/Contents/.-->
 		</fileSet>
 		<fileSet>
 			<directory>source/main/assembly/resources</directory>
-			<outputDirectory>bin</outputDirectory>
+			<outputDirectory/>
 		</fileSet>
 	</fileSets>
 	<files>
