@@ -20,7 +20,8 @@ paths in this descriptor start with ${project.name}.app/Contents/.-->
 			<directory>target/main/images</directory>
 			<outputDirectory>${project.name}.app/Contents/bin</outputDirectory>
 			<includes>
-				<include>${project.artifactId}.*</include>
+				<include>${project.artifactId}*.ico</include>
+				<include>${project.artifactId}*.png</include>
 			</includes>
 		</fileSet>
 		<fileSet>

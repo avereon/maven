@@ -22,7 +22,8 @@ descriptor *do not* start with ${project.name}.app/Contents/.-->
 			<directory>target/main/images</directory>
 			<outputDirectory>bin</outputDirectory>
 			<includes>
-				<include>${project.artifactId}.*</include>
+				<include>${project.artifactId}*.ico</include>
+				<include>${project.artifactId}*.png</include>
 			</includes>
 		</fileSet>
 		<fileSet>
