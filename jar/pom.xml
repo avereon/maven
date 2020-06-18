@@ -70,7 +70,6 @@
 				<artifactId>maven-javadoc-plugin</artifactId>
 				<executions>
 					<execution>
-						<phase>verify</phase>
 						<goals>
 							<goal>jar</goal>
 						</goals>
