@@ -8,15 +8,26 @@ jobs:
     steps:
       - name: Fetch sources
         uses: actions/checkout@v1
+
       - name: Set up JDK 11
         uses: actions/setup-java@v1
         with:
           java-version: 11
+
+      - name: Maven Repository Cache
+        uses: actions/cache@v1
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
+
       - name: Deploy POMS
         env:
           AVN_REPO_USERNAME: ${{ secrets.AVN_REPO_USERNAME }}
           AVN_REPO_PASSWORD: ${{ secrets.AVN_REPO_PASSWORD }}
         run: mvn --settings .github/settings.xml -B -P poms -U help:active-profiles clean deploy:deploy
+
       - name: Deploy JARS
         env:
           AVN_REPO_USERNAME: ${{ secrets.AVN_REPO_USERNAME }}
