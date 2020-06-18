@@ -68,11 +68,19 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
-				<configuration>
-					<additionalJOption>-Xdoclint:none</additionalJOption>
-					<failOnError>false</failOnError>
-					<quiet>true</quiet>
-				</configuration>
+				<executions>
+					<execution>
+						<phase>verify</phase>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+						<configuration>
+							<additionalJOption>-Xdoclint:none</additionalJOption>
+							<failOnError>false</failOnError>
+							<quiet>true</quiet>
+						</configuration>
+					</execution>
+				</executions>
 			</plugin>
 
 		</plugins>
