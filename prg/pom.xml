@@ -31,32 +31,4 @@
 		</repository>
 	</repositories>
 
-	<profiles>
-
-		<profile>
-			<id>assemblies</id>
-			<build>
-				<plugins>
-					<plugin>
-						<artifactId>maven-assembly-plugin</artifactId>
-						<executions>
-							<execution>
-								<!-- Must match execution id in parent pom -->
-								<id>assembly-product</id>
-								<configuration>
-									<finalName>product</finalName>
-									<descriptorRefs>
-										<descriptorRef>product-${product.platform}</descriptorRef>
-									</descriptorRefs>
-									<ignoreMissingDescriptor>true</ignoreMissingDescriptor>
-								</configuration>
-							</execution>
-						</executions>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-
-	</profiles>
-
 </project>
