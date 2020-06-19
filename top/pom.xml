@@ -34,6 +34,8 @@
 		<maven.source.version>3.1.0</maven.source.version>
 		<maven.javadoc.version>3.1.1</maven.javadoc.version>
 		<maven.buildnumber.version>1.4</maven.buildnumber.version>
+
+		<jlink.module.path>${java.home}/jmods:${basedir}/target/dependency/:${basedir}/target/${project.build.finalName}.${project.packaging}</jlink.module.path>
 	</properties>
 
 	<organization>
@@ -225,7 +227,6 @@
 			</activation>
 			<properties>
 				<product.platform>linux</product.platform>
-				<jlink.module.path>${java.home}/jmods:${basedir}/target/dependency/:${basedir}/target</jlink.module.path>
 			</properties>
 		</profile>
 		<profile>
@@ -237,7 +238,6 @@
 			</activation>
 			<properties>
 				<product.platform>macos</product.platform>
-				<jlink.module.path>${java.home}/jmods:${basedir}/target/dependency/:${basedir}/target</jlink.module.path>
 			</properties>
 		</profile>
 		<profile>
@@ -249,7 +249,6 @@
 			</activation>
 			<properties>
 				<product.platform>windows</product.platform>
-				<jlink.module.path>${java.home}/jmods;${basedir}/target/dependency/;${basedir}/target</jlink.module.path>
 			</properties>
 		</profile>
 	</profiles>
