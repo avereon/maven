@@ -35,7 +35,7 @@
 		<maven.javadoc.version>3.1.1</maven.javadoc.version>
 		<maven.buildnumber.version>1.4</maven.buildnumber.version>
 
-		<jlink.module.path>${java.home}/jmods:${basedir}/target/dependency/:${basedir}/target/${project.build.finalName}.${project.packaging}</jlink.module.path>
+		<jlink.module.path>${basedir}/target/dependency${path.separator}${basedir}/target/${project.build.finalName}.${project.packaging}</jlink.module.path>
 	</properties>
 
 	<organization>
