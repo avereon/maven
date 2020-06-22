@@ -9,7 +9,7 @@
 	<includeBaseDirectory>false</includeBaseDirectory>
 	<fileSets>
 		<fileSet>
-			<directory>target/jpackage/${project.artifactId}</directory>
+			<directory>target/jpackage/${project.name}</directory>
 			<outputDirectory/>
 		</fileSet>
 <!--		<fileSet>-->
@@ -27,7 +27,7 @@
 	</fileSets>
 	<files>
 		<file>
-			<source>target/jpackage/${project.artifactId}/bin/${project.name}</source>
+			<source>target/jpackage/${project.name}/bin/${project.name}</source>
 			<outputDirectory>bin</outputDirectory>
 			<fileMode>0755</fileMode>
 		</file>
