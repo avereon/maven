@@ -27,7 +27,7 @@
 	</fileSets>
 	<files>
 		<file>
-			<source>target/jpackage/xenon/bin/${project.name}.exe</source>
+			<source>target/jpackage/${project.artifactId}/bin/${project.name}.exe</source>
 			<outputDirectory>bin</outputDirectory>
 			<fileMode>0755</fileMode>
 		</file>

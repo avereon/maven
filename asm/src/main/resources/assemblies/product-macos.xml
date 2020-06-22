@@ -33,7 +33,7 @@ descriptor *do not* start with ${project.name}.app/Contents/.-->
 	</fileSets>
 	<files>
 		<file>
-			<source>target/jpackage/xenon/bin/${project.name}</source>
+			<source>target/jpackage/${project.artifactId}/bin/${project.name}</source>
 			<outputDirectory>bin</outputDirectory>
 			<fileMode>0755</fileMode>
 		</file>
