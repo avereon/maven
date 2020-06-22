@@ -15,7 +15,8 @@ descriptor *do not* start with ${project.name}.app/Contents/.-->
 	<includeBaseDirectory>false</includeBaseDirectory>
 	<fileSets>
 		<fileSet>
-			<directory>target/jpackage/${project.artifactId}</directory>
+			<!-- target/jpackage/xenon.app/Contents/runtime/Contents/Home -->
+			<directory>target/jpackage/${project.artifactId}.app/Contents</directory>
 			<outputDirectory/>
 		</fileSet>
 <!--		<fileSet>-->
@@ -33,7 +34,7 @@ descriptor *do not* start with ${project.name}.app/Contents/.-->
 	</fileSets>
 <!--	<files>-->
 <!--		<file>-->
-<!--			<source>target/jpackage/${project.artifactId}/bin/${project.name}</source>-->
+<!--			<source>target/jpackage/${project.artifactId}.app/Contents/${project.name}</source>-->
 <!--			<outputDirectory>bin</outputDirectory>-->
 <!--			<fileMode>0755</fileMode>-->
 <!--		</file>-->
