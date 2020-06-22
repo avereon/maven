@@ -27,7 +27,7 @@
 	</fileSets>
 	<files>
 		<file>
-			<source>target/jpackage/${project.artifactId}/bin/${project.artifactId}</source>
+			<source>target/jpackage/${project.artifactId}/bin/${project.name}</source>
 			<outputDirectory>bin</outputDirectory>
 			<fileMode>0755</fileMode>
 		</file>

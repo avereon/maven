@@ -25,21 +25,21 @@
 <!--			<outputDirectory/>-->
 <!--		</fileSet>-->
 	</fileSets>
-<!--	<files>-->
+	<files>
+		<file>
+			<source>target/jpackage/${project.artifactId}/${project.name}.exe</source>
+			<outputDirectory>bin</outputDirectory>
+			<fileMode>0755</fileMode>
+		</file>
 <!--		<file>-->
-<!--			<source>target/jpackage/${project.artifactId}/bin/${project.name}.exe</source>-->
+<!--			<source>target/jlink/bin/keytool.exe</source>-->
 <!--			<outputDirectory>bin</outputDirectory>-->
 <!--			<fileMode>0755</fileMode>-->
 <!--		</file>-->
-<!--&lt;!&ndash;		<file>&ndash;&gt;-->
-<!--&lt;!&ndash;			<source>target/jlink/bin/keytool.exe</source>&ndash;&gt;-->
-<!--&lt;!&ndash;			<outputDirectory>bin</outputDirectory>&ndash;&gt;-->
-<!--&lt;!&ndash;			<fileMode>0755</fileMode>&ndash;&gt;-->
-<!--&lt;!&ndash;		</file>&ndash;&gt;-->
-<!--&lt;!&ndash;		<file>&ndash;&gt;-->
-<!--&lt;!&ndash;			<source>target/jlink/bin/${project.artifactId}.bat</source>&ndash;&gt;-->
-<!--&lt;!&ndash;			<outputDirectory>bin</outputDirectory>&ndash;&gt;-->
-<!--&lt;!&ndash;			<fileMode>0755</fileMode>&ndash;&gt;-->
-<!--&lt;!&ndash;		</file>&ndash;&gt;-->
-<!--	</files>-->
+<!--		<file>-->
+<!--			<source>target/jlink/bin/${project.artifactId}.bat</source>-->
+<!--			<outputDirectory>bin</outputDirectory>-->
+<!--			<fileMode>0755</fileMode>-->
+<!--		</file>-->
+	</files>
 </assembly>
