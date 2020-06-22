@@ -15,53 +15,53 @@ descriptor *do not* start with ${project.name}.app/Contents/.-->
 	<includeBaseDirectory>false</includeBaseDirectory>
 	<fileSets>
 		<fileSet>
-			<directory>target/jlink</directory>
+			<directory>target/jpackage/${project.artifactId}</directory>
 			<outputDirectory/>
 		</fileSet>
-		<fileSet>
-			<directory>target/main/images</directory>
-			<outputDirectory>bin</outputDirectory>
-			<includes>
-				<include>${project.artifactId}*.ico</include>
-				<include>${project.artifactId}*.png</include>
-			</includes>
-		</fileSet>
-		<fileSet>
-			<directory>source/main/assembly/resources</directory>
-			<outputDirectory/>
-		</fileSet>
+<!--		<fileSet>-->
+<!--			<directory>target/main/images</directory>-->
+<!--			<outputDirectory>bin</outputDirectory>-->
+<!--			<includes>-->
+<!--				<include>${project.artifactId}*.ico</include>-->
+<!--				<include>${project.artifactId}*.png</include>-->
+<!--			</includes>-->
+<!--		</fileSet>-->
+<!--		<fileSet>-->
+<!--			<directory>source/main/assembly/resources</directory>-->
+<!--			<outputDirectory/>-->
+<!--		</fileSet>-->
 	</fileSets>
 	<files>
 		<file>
-			<source>target/jlink/bin/java</source>
+			<source>target/jpackage/xenon/bin/${project.name}</source>
 			<outputDirectory>bin</outputDirectory>
 			<fileMode>0755</fileMode>
 		</file>
-		<file>
-			<source>target/jlink/bin/keytool</source>
-			<outputDirectory>bin</outputDirectory>
-			<fileMode>0755</fileMode>
-		</file>
-		<file>
-			<source>target/jlink/bin/${project.artifactId}</source>
-			<outputDirectory>bin</outputDirectory>
-			<fileMode>0755</fileMode>
-		</file>
-		<file>
-			<source>source/main/assembly/macos/Info.plist</source>
-			<outputDirectory/>
-			<filtered>true</filtered>
-			<fileMode>0644</fileMode>
-		</file>
-		<file>
-			<source>source/main/assembly/macos/${project.artifactId}</source>
-			<outputDirectory>MacOS</outputDirectory>
-			<fileMode>0755</fileMode>
-		</file>
-		<file>
-			<source>target/main/images/${project.artifactId}.png</source>
-			<outputDirectory>Resources</outputDirectory>
-			<fileMode>0644</fileMode>
-		</file>
+<!--		<file>-->
+<!--			<source>target/jlink/bin/keytool</source>-->
+<!--			<outputDirectory>bin</outputDirectory>-->
+<!--			<fileMode>0755</fileMode>-->
+<!--		</file>-->
+<!--		<file>-->
+<!--			<source>target/jlink/bin/${project.artifactId}</source>-->
+<!--			<outputDirectory>bin</outputDirectory>-->
+<!--			<fileMode>0755</fileMode>-->
+<!--		</file>-->
+<!--		<file>-->
+<!--			<source>source/main/assembly/macos/Info.plist</source>-->
+<!--			<outputDirectory/>-->
+<!--			<filtered>true</filtered>-->
+<!--			<fileMode>0644</fileMode>-->
+<!--		</file>-->
+<!--		<file>-->
+<!--			<source>source/main/assembly/macos/${project.artifactId}</source>-->
+<!--			<outputDirectory>MacOS</outputDirectory>-->
+<!--			<fileMode>0755</fileMode>-->
+<!--		</file>-->
+<!--		<file>-->
+<!--			<source>target/main/images/${project.artifactId}.png</source>-->
+<!--			<outputDirectory>Resources</outputDirectory>-->
+<!--			<fileMode>0644</fileMode>-->
+<!--		</file>-->
 	</files>
 </assembly>
