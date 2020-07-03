@@ -22,18 +22,21 @@
 		<maven.build.timestamp.format>yyyy-MM-dd HH:mm:ss</maven.build.timestamp.format>
 		<project.timestamp>${maven.build.timestamp}</project.timestamp>
 
-		<!-- Version numbers updated 02 Oct 2019 -->
+		<!-- Version numbers updated 02 Jul 2020 -->
 		<maven.compiler.version>3.8.1</maven.compiler.version>
 		<maven.resources.version>3.1.0</maven.resources.version>
-		<maven.surefire.version>3.0.0-M3</maven.surefire.version>
-		<maven.jar.version>3.1.2</maven.jar.version>
-		<maven.war.version>3.2.3</maven.war.version>
+		<maven.surefire.version>3.0.0-M5</maven.surefire.version>
+		<maven.jar.version>3.2.0</maven.jar.version>
+		<maven.war.version>3.3.0</maven.war.version>
+		<maven.plugin.version>3.6.0</maven.plugin.version>
 		<maven.jarsigner.version>3.0.0</maven.jarsigner.version>
-		<maven.assembly.version>3.1.1</maven.assembly.version>
+		<maven.assembly.version>3.3.0</maven.assembly.version>
 		<maven.deploy.version>3.0.0-M1</maven.deploy.version>
-		<maven.source.version>3.1.0</maven.source.version>
-		<maven.javadoc.version>3.1.1</maven.javadoc.version>
+		<maven.source.version>3.2.1</maven.source.version>
+		<maven.javadoc.version>3.2.0</maven.javadoc.version>
 		<maven.buildnumber.version>1.4</maven.buildnumber.version>
+		<maven.dependency.version>3.1.2</maven.dependency.version>
+		<maven.exec.version>3.0.0</maven.exec.version>
 
 		<jlink.module.path>${basedir}/target/dependency${path.separator}${basedir}/target/${project.build.finalName}.${project.packaging}</jlink.module.path>
 	</properties>
@@ -163,6 +166,12 @@
 
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-plugin-plugin</artifactId>
+					<version>${maven.plugin.version}</version>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-jarsigner-plugin</artifactId>
 					<version>${maven.jarsigner.version}</version>
 				</plugin>
@@ -196,6 +205,18 @@
 					<groupId>org.codehaus.mojo</groupId>
 					<artifactId>buildnumber-maven-plugin</artifactId>
 					<version>${maven.buildnumber.version}</version>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-dependency-plugin</artifactId>
+					<version>${maven.dependency.version}</version>
+				</plugin>
+
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>exec-maven-plugin</artifactId>
+					<version>${maven.exec.version}</version>
 				</plugin>
 
 			</plugins>

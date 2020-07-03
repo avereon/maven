@@ -20,8 +20,10 @@
 	<description>The parent POM for Avereon JAR projects using Maven.</description>
 
 	<properties>
-		<junit.version>5.5.2</junit.version><!-- this triggers junit5 mode of surefire plugin -->
-		<hamcrest.version>2.1</hamcrest.version>
+		<!-- Version numbers updated 02 Jul 2020 -->
+		<!-- this triggers junit5 mode of surefire plugin -->
+		<junit.version>5.6.2</junit.version>
+		<hamcrest.version>2.2</hamcrest.version>
 	</properties>
 
 	<repositories>
