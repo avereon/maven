@@ -19,10 +19,10 @@
 	<name>Avereon Program Parent POM</name>
 	<description>The parent POM for Avereon programs.</description>
 
-	<properties>
-		<product-name>${project.name}</product-name>
-		<product-identifier>${project.artifactId}</product-identifier>
-	</properties>
+<!--	<properties>-->
+<!--		<product-name>${project.name}</product-name>-->
+<!--		<product-identifier>${project.artifactId}</product-identifier>-->
+<!--	</properties>-->
 
 	<repositories>
 		<repository>
