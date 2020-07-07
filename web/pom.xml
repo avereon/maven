@@ -42,6 +42,8 @@
 		<maven.javadoc.version>2.10.4</maven.javadoc.version>
 		<maven.buildnumber.version>1.4</maven.buildnumber.version>
 		<maven.tomcat7.version>2.2</maven.tomcat7.version>
+
+		<cameo.version>2.7-SNAPSHOT</cameo.version>
 	</properties>
 
 	<organization>
@@ -235,6 +237,12 @@
 					<groupId>org.apache.tomcat.maven</groupId>
 					<artifactId>tomcat7-maven-plugin</artifactId>
 					<version>${maven.tomcat7.version}</version>
+				</plugin>
+
+				<plugin>
+					<groupId>com.avereon</groupId>
+					<artifactId>cameo</artifactId>
+					<version>${cameo.version}</version>
 				</plugin>
 
 			</plugins>
