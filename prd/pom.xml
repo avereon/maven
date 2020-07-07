@@ -2,7 +2,8 @@
 
 <!-- Deploy: mvn deploy:deploy -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+				 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
 
@@ -100,6 +101,16 @@
 							<version>${project.parent.version}</version>
 						</dependency>
 					</dependencies>
+				</plugin>
+				<plugin>
+					<groupId>com.avereon</groupId>
+					<artifactId>cameo</artifactId>
+					<version>${cameo.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>com.avereon</groupId>
+					<artifactId>curex</artifactId>
+					<version>${curex.version}</version>
 				</plugin>
 			</plugins>
 		</pluginManagement>
