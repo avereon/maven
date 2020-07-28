@@ -26,10 +26,11 @@
 
 		<!-- Version numbers updated 02 Jul 2020 -->
 		<!-- Runtime dependencies -->
-		<zevra.version>0.5-SNAPSHOT</zevra.version>
-		<venza.version>0.4-SNAPSHOT</venza.version>
 		<rossa.version>0.4-SNAPSHOT</rossa.version>
+		<zarra.version>0.4-SNAPSHOT</zarra.version>
 		<zenna.version>0.5-SNAPSHOT</zenna.version>
+		<zerra.version>0.4-SNAPSHOT</zerra.version>
+		<zevra.version>0.5-SNAPSHOT</zevra.version>
 		<openjfx.version>14.0.1</openjfx.version>
 		<controlsfx.version>11.0.1</controlsfx.version>
 
