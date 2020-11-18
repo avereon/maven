@@ -1,21 +1,23 @@
 <?xml version="1.0"?>
 
 <assembly>
-	<id>mod</id>
+	<id>module</id>
 	<formats>
 		<format>jar</format>
 	</formats>
 	<includeBaseDirectory>false</includeBaseDirectory>
 	<dependencySets>
 		<dependencySet>
-			<outputFileNameMapping>${artifact.artifactId}.${artifact.extension}</outputFileNameMapping>
 			<outputDirectory>/</outputDirectory>
 			<useProjectArtifact>true</useProjectArtifact>
-			<unpack>true</unpack>
 			<scope>runtime</scope>
-			<excludes>
-				<exclude>META-INF/*</exclude>
-			</excludes>
+			<unpack>true</unpack>
 		</dependencySet>
 	</dependencySets>
+	<fileSets>
+		<fileSet>
+			<directory>${project.build.directory}/main/java/META-INF</directory>
+			<outputDirectory>META-INF</outputDirectory>
+		</fileSet>
+	</fileSets>
 </assembly>
