@@ -18,6 +18,10 @@
 		<fileSet>
 			<directory>${project.build.directory}/main/java/META-INF</directory>
 			<outputDirectory>META-INF</outputDirectory>
+			<includes>
+				<include>product.card</include>
+				<include>product.info</include>
+			</includes>
 		</fileSet>
 	</fileSets>
 </assembly>
