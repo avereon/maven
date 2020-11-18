@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 
 <assembly>
-	<id>module</id>
+	<id>module-1</id>
 	<formats>
 		<format>jar</format>
 	</formats>
@@ -14,15 +14,4 @@
 			<unpack>true</unpack>
 		</dependencySet>
 	</dependencySets>
-	<fileSets>
-		<fileSet>
-			<directory>${project.build.directory}/main/java</directory>
-			<outputDirectory>/</outputDirectory>
-			<includes>
-				<include>module-info.class</include>
-				<include>META-INF/product.card</include>
-				<include>META-INF/product.info</include>
-			</includes>
-		</fileSet>
-	</fileSets>
 </assembly>
