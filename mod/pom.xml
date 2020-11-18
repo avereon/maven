@@ -57,7 +57,7 @@
 								<configuration>
 									<finalName>product</finalName>
 									<descriptorRefs>
-										<descriptorRef>module</descriptorRef>
+										<descriptorRef>module-1</descriptorRef>
 									</descriptorRefs>
 									<ignoreMissingDescriptor>true</ignoreMissingDescriptor>
 								</configuration>
