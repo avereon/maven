@@ -1,23 +1,21 @@
 <?xml version="1.0"?>
 
-
 <assembly>
-	<id>module</id>
+	<id>mod</id>
 	<formats>
 		<format>jar</format>
 	</formats>
 	<includeBaseDirectory>false</includeBaseDirectory>
-	<fileSets>
-		<fileSet>
-			<directory>source/main/module</directory>
-			<outputDirectory/>
-		</fileSet>
-	</fileSets>
 	<dependencySets>
 		<dependencySet>
 			<outputFileNameMapping>${artifact.artifactId}.${artifact.extension}</outputFileNameMapping>
-			<outputDirectory/>
+			<outputDirectory>/</outputDirectory>
+			<useProjectArtifact>true</useProjectArtifact>
+			<unpack>true</unpack>
 			<scope>runtime</scope>
+			<excludes>
+				<exclude>META-INF/*</exclude>
+			</excludes>
 		</dependencySet>
 	</dependencySets>
 </assembly>
