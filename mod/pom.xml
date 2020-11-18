@@ -59,6 +59,8 @@
 									<descriptorRefs>
 										<descriptorRef>module-1</descriptorRef>
 									</descriptorRefs>
+									<attach>false</attach>
+									<appendAssemblyId>false</appendAssemblyId>
 									<ignoreMissingDescriptor>true</ignoreMissingDescriptor>
 								</configuration>
 							</execution>
