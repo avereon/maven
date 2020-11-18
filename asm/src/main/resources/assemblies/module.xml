@@ -16,11 +16,12 @@
 	</dependencySets>
 	<fileSets>
 		<fileSet>
-			<directory>${project.build.directory}/main/java/META-INF</directory>
-			<outputDirectory>META-INF</outputDirectory>
+			<directory>${project.build.directory}/main/java</directory>
+			<outputDirectory>/</outputDirectory>
 			<includes>
-				<include>product.card</include>
-				<include>product.info</include>
+				<include>module-info.class</include>
+				<include>META-INF/product.card</include>
+				<include>META-INF/product.info</include>
 			</includes>
 		</fileSet>
 	</fileSets>
