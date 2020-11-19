@@ -57,7 +57,7 @@
 								<configuration>
 									<finalName>product</finalName>
 									<descriptorRefs>
-										<descriptorRef>module-1</descriptorRef>
+										<descriptorRef>module-2</descriptorRef>
 									</descriptorRefs>
 									<attach>false</attach>
 									<appendAssemblyId>false</appendAssemblyId>
