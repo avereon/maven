@@ -43,7 +43,6 @@
 	</dependencies>
 
 	<profiles>
-
 		<profile>
 			<id>packs</id>
 			<build>
@@ -59,9 +58,6 @@
 									<descriptorRefs>
 										<descriptorRef>module-2</descriptorRef>
 									</descriptorRefs>
-									<attach>false</attach>
-									<appendAssemblyId>false</appendAssemblyId>
-									<ignoreMissingDescriptor>true</ignoreMissingDescriptor>
 								</configuration>
 							</execution>
 						</executions>
@@ -69,7 +65,6 @@
 				</plugins>
 			</build>
 		</profile>
-
 	</profiles>
 
 </project>
