@@ -31,8 +31,8 @@
 		<zenna.version>0.5-SNAPSHOT</zenna.version>
 		<zerra.version>0.4-SNAPSHOT</zerra.version>
 		<zevra.version>0.5-SNAPSHOT</zevra.version>
-		<openjfx.version>14.0.1</openjfx.version>
-		<controlsfx.version>11.0.1</controlsfx.version>
+		<openjfx.version>14.0.2.1</openjfx.version>
+		<controlsfx.version>11.1.0</controlsfx.version>
 
 		<!-- Test dependencies -->
 		<testfx.version>4.0.16-alpha</testfx.version>
