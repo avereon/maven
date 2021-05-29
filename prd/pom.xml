@@ -10,7 +10,7 @@
 	<parent>
 		<groupId>com.avereon.pom</groupId>
 		<artifactId>jar</artifactId>
-		<version>3.2.0-SNAPSHOT</version>
+		<version>3.1.0</version>
 		<relativePath>../jar</relativePath>
 	</parent>
 
@@ -26,11 +26,11 @@
 
 		<!-- Version numbers updated 02 Jul 2020 -->
 		<!-- Runtime dependencies -->
-		<weave.version>0.4-SNAPSHOT</weave.version>
-		<zarra.version>0.4-SNAPSHOT</zarra.version>
-		<zenna.version>0.5-SNAPSHOT</zenna.version>
-		<zerra.version>0.4-SNAPSHOT</zerra.version>
-		<zevra.version>0.5-SNAPSHOT</zevra.version>
+		<weave.version>0.4</weave.version>
+		<zarra.version>0.4</zarra.version>
+		<zenna.version>0.5</zenna.version>
+		<zerra.version>0.4</zerra.version>
+		<zevra.version>0.5</zevra.version>
 		<openjfx.version>14.0.2.1</openjfx.version>
 		<controlsfx.version>11.1.0</controlsfx.version>
 
@@ -40,8 +40,8 @@
 		<mockito.version>3.10.0</mockito.version>
 
 		<!-- Build dependencies -->
-		<cameo.version>2.7-SNAPSHOT</cameo.version>
-		<curex.version>1.2-SNAPSHOT</curex.version>
+		<cameo.version>2.7</cameo.version>
+		<curex.version>1.2</curex.version>
 	</properties>
 
 	<repositories>
