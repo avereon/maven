@@ -2,138 +2,161 @@
 
 <!-- Deploy: mvn deploy:deploy -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
-	<modelVersion>4.0.0</modelVersion>
+    <modelVersion>4.0.0</modelVersion>
 
-	<parent>
-		<groupId>com.avereon.pom</groupId>
-		<artifactId>top</artifactId>
-		<version>3.2.0-SNAPSHOT</version>
-		<relativePath>../top</relativePath>
-	</parent>
+    <parent>
+        <groupId>com.avereon.pom</groupId>
+        <artifactId>top</artifactId>
+        <version>3.2.0-SNAPSHOT</version>
+        <relativePath>../top</relativePath>
+    </parent>
 
-	<artifactId>jar</artifactId>
-	<packaging>pom</packaging>
+    <artifactId>jar</artifactId>
+    <packaging>pom</packaging>
 
-	<name>Avereon Jar Parent POM</name>
-	<description>The parent POM for Avereon JAR projects using Maven.</description>
+    <name>Avereon Jar Parent POM</name>
+    <description>The parent POM for Avereon JAR projects using Maven.</description>
 
-	<properties>
-		<!-- Version numbers updated 17 Jun 2021 -->
-		<!-- this triggers junit5 mode of surefire plugin -->
-		<junit.version>5.7.2</junit.version>
-		<hamcrest.version>2.2</hamcrest.version>
-	</properties>
+    <properties>
+        <!-- Version numbers updated 17 Jun 2021 -->
+        <!-- this triggers junit5 mode of surefire plugin -->
+        <hamcrest.version>2.2</hamcrest.version>
+        <lombok.version>1.18.20</lombok.version>
+        <junit.version>5.7.2</junit.version>
+    </properties>
 
-	<repositories>
-		<repository>
-			<id>avn</id>
-			<url>https://repo.avereon.com/avn</url>
-		</repository>
-	</repositories>
+    <repositories>
+        <repository>
+            <id>avn</id>
+            <url>https://repo.avereon.com/avn</url>
+        </repository>
+    </repositories>
 
-	<dependencies>
+    <dependencies>
 
-		<dependency>
-			<groupId>org.junit.jupiter</groupId>
-			<artifactId>junit-jupiter</artifactId>
-			<version>${junit.version}</version>
-			<scope>test</scope>
-		</dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+            <scope>provided</scope>
+        </dependency>
 
-		<dependency>
-			<groupId>org.hamcrest</groupId>
-			<artifactId>hamcrest-core</artifactId>
-			<version>${hamcrest.version}</version>
-			<scope>test</scope>
-		</dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
 
-	</dependencies>
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-core</artifactId>
+            <version>${hamcrest.version}</version>
+            <scope>test</scope>
+        </dependency>
 
-	<build>
-		<plugins>
+    </dependencies>
 
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-source-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>attach-sources</id>
-						<goals>
-							<goal>jar</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
+    <build>
+        <plugins>
 
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-javadoc-plugin</artifactId>
-				<executions>
-					<execution>
-						<goals>
-							<goal>jar</goal>
-						</goals>
-						<configuration>
-							<additionalJOption>-Xdoclint:none</additionalJOption>
-							<failOnError>false</failOnError>
-							<quiet>true</quiet>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <annotationProcessorPaths>
+                        <path>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                            <version>${lombok.version}</version>
+                        </path>
+                    </annotationProcessorPaths>
+                </configuration>
+            </plugin>
 
-		</plugins>
-	</build>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
 
-	<profiles>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                        <configuration>
+                            <additionalJOption>-Xdoclint:none</additionalJOption>
+                            <failOnError>false</failOnError>
+                            <quiet>true</quiet>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
 
-		<profile>
-			<id>failsafe</id>
-			<build>
-				<plugins>
-					<plugin>
-						<artifactId>maven-failsafe-plugin</artifactId>
-						<!-- Version specified in parent -->
-						<executions>
-							<execution>
-								<goals>
-									<goal>integration-test</goal>
-									<goal>verify</goal>
-								</goals>
-							</execution>
-						</executions>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
+        </plugins>
+    </build>
 
-		<profile>
-			<id>signjar</id>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-jarsigner-plugin</artifactId>
-						<executions>
-							<execution>
-								<id>sign</id>
-								<goals>
-									<goal>sign</goal>
-								</goals>
-							</execution>
-						</executions>
-						<configuration>
-							<keystore>${jarsigner.keystore}</keystore>
-							<storepass>${jarsigner.keystore.password}</storepass>
-							<alias>code</alias>
-						</configuration>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
+    <profiles>
 
-	</profiles>
+        <profile>
+            <id>failsafe</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <artifactId>maven-failsafe-plugin</artifactId>
+                        <!-- Version specified in parent -->
+                        <executions>
+                            <execution>
+                                <goals>
+                                    <goal>integration-test</goal>
+                                    <goal>verify</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+        <profile>
+            <id>signjar</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-jarsigner-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>sign</id>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                        <configuration>
+                            <keystore>${jarsigner.keystore}</keystore>
+                            <storepass>${jarsigner.keystore.password}</storepass>
+                            <alias>code</alias>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+    </profiles>
 
 </project>
