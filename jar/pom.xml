@@ -23,9 +23,10 @@
     <properties>
         <!-- Version numbers updated 17 Jun 2021 -->
         <!-- this triggers junit5 mode of surefire plugin -->
+        <flogger.version>0.6</flogger.version>
         <hamcrest.version>2.2</hamcrest.version>
-        <lombok.version>1.18.20</lombok.version>
         <junit.version>5.7.2</junit.version>
+        <lombok.version>1.18.20</lombok.version>
     </properties>
 
     <repositories>
@@ -36,6 +37,12 @@
     </repositories>
 
     <dependencies>
+
+        <dependency>
+            <groupId>com.google.flogger</groupId>
+            <artifactId>flogger</artifactId>
+            <version>${flogger.version}</version>
+        </dependency>
 
         <dependency>
             <groupId>org.projectlombok</groupId>
