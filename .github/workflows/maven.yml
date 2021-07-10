@@ -1,4 +1,4 @@
-name: Avereon Maven CI
+name: CI
 
 on: [push]
 
