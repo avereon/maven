@@ -26,11 +26,11 @@
 
 		<!-- Version numbers updated 02 Jul 2020 -->
 		<!-- Runtime dependencies -->
-		<weave.version>0.5-SNAPSHOT</weave.version>
-		<zarra.version>0.5-SNAPSHOT</zarra.version>
-		<zenna.version>0.6-SNAPSHOT</zenna.version>
-		<zerra.version>0.5-SNAPSHOT</zerra.version>
-		<zevra.version>0.6-SNAPSHOT</zevra.version>
+		<weave.version>1.0</weave.version>
+		<zarra.version>0.7</zarra.version>
+		<zenna.version>0.7</zenna.version>
+		<zerra.version>0.7</zerra.version>
+		<zevra.version>0.7</zevra.version>
 		<openjfx.version>16</openjfx.version>
 		<controlsfx.version>11.1.0</controlsfx.version>
 
