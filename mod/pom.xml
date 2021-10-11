@@ -9,7 +9,7 @@
 	<parent>
 		<groupId>com.avereon.pom</groupId>
 		<artifactId>prd</artifactId>
-		<version>3.2.0</version>
+		<version>3.3.0</version>
 		<relativePath>../prd</relativePath>
 	</parent>
 
@@ -20,7 +20,7 @@
 	<description>The parent POM for Avereon modules.</description>
 
 	<properties>
-		<!-- Version numbers updated 02 Jul 2020 -->
+		<!-- Version numbers updated 11 Oct 2021 -->
 		<xenon.version>[1.5,)</xenon.version>
 	</properties>
 

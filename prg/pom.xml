@@ -9,7 +9,7 @@
 	<parent>
 		<groupId>com.avereon.pom</groupId>
 		<artifactId>prd</artifactId>
-		<version>3.2.0</version>
+		<version>3.3.0</version>
 		<relativePath>../prd</relativePath>
 	</parent>
 
@@ -18,11 +18,6 @@
 
 	<name>Avereon Program Parent POM</name>
 	<description>The parent POM for Avereon programs.</description>
-
-<!--	<properties>-->
-<!--		<product-name>${project.name}</product-name>-->
-<!--		<product-identifier>${project.artifactId}</product-identifier>-->
-<!--	</properties>-->
 
 	<repositories>
 		<repository>

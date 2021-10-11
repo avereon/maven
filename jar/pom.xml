@@ -10,7 +10,7 @@
 	<parent>
 		<groupId>com.avereon.pom</groupId>
 		<artifactId>top</artifactId>
-		<version>3.2.0</version>
+		<version>3.3.0</version>
 		<relativePath>../top</relativePath>
 	</parent>
 
@@ -21,11 +21,11 @@
 	<description>The parent POM for Avereon JAR projects using Maven.</description>
 
 	<properties>
-		<!-- Version numbers updated 17 Jun 2021 -->
-		<!-- this triggers junit5 mode of surefire plugin -->
+		<!-- Version numbers updated 11 Oct 2021 -->
 		<hamcrest.version>2.2</hamcrest.version>
-		<junit.version>5.7.2</junit.version>
-		<lombok.version>1.18.20</lombok.version>
+		<!-- this triggers junit5 mode of surefire plugin -->
+		<junit.version>5.8.1</junit.version>
+		<lombok.version>1.18.22</lombok.version>
 	</properties>
 
 	<repositories>

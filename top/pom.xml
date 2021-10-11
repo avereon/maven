@@ -8,7 +8,7 @@
 
 	<groupId>com.avereon.pom</groupId>
 	<artifactId>top</artifactId>
-	<version>3.2.0</version>
+	<version>3.3.0</version>
 	<packaging>pom</packaging>
 
 	<name>Avereon Top Parent POM</name>
@@ -17,25 +17,25 @@
 	<url>https://www.avereon.com/</url>
 
 	<properties>
-		<java.version>14</java.version>
+		<java.version>17</java.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.build.timestamp.format>yyyy-MM-dd HH:mm:ss</maven.build.timestamp.format>
 		<project.timestamp>${maven.build.timestamp}</project.timestamp>
 
-		<!-- Version numbers updated 02 Jul 2020 -->
+		<!-- Version numbers updated 11 Oct 2021 -->
 		<maven.compiler.version>3.8.1</maven.compiler.version>
-		<maven.resources.version>3.1.0</maven.resources.version>
+		<maven.resources.version>3.2.0</maven.resources.version>
 		<maven.surefire.version>3.0.0-M5</maven.surefire.version>
 		<maven.jar.version>3.2.0</maven.jar.version>
-		<maven.war.version>3.3.0</maven.war.version>
-		<maven.plugin.version>3.6.0</maven.plugin.version>
+		<maven.war.version>3.3.2</maven.war.version>
+		<maven.plugin.version>3.6.1</maven.plugin.version>
 		<maven.jarsigner.version>3.0.0</maven.jarsigner.version>
 		<maven.assembly.version>3.3.0</maven.assembly.version>
 		<maven.deploy.version>3.0.0-M1</maven.deploy.version>
 		<maven.source.version>3.2.1</maven.source.version>
 		<maven.javadoc.version>3.3.1</maven.javadoc.version>
 		<maven.buildnumber.version>1.4</maven.buildnumber.version>
-		<maven.dependency.version>3.1.2</maven.dependency.version>
+		<maven.dependency.version>3.2.0</maven.dependency.version>
 		<maven.exec.version>3.0.0</maven.exec.version>
 
 		<jlink.module.path>${basedir}/target/dependency${path.separator}${basedir}/target/${project.build.finalName}.${project.packaging}</jlink.module.path>
@@ -56,8 +56,8 @@
 	</developers>
 
 	<ciManagement>
-		<system>Jenkins</system>
-		<url>https://code.avereon.com/build</url>
+		<system>GitHub Actions</system>
+		<url>https://github.com/avereon/</url>
 	</ciManagement>
 
 	<repositories>
