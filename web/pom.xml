@@ -110,14 +110,14 @@
 		<dependency><!-- this triggers junit5 mode of surefire plugin -->
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter-engine</artifactId>
-			<version>${junit5.version}</version>
+			<version>${junit.version}</version>
 			<scope>test</scope>
 		</dependency>
 
 		<dependency><!-- this triggers junit5 mode of surefire plugin -->
 			<groupId>org.junit.vintage</groupId>
 			<artifactId>junit-vintage-engine</artifactId>
-			<version>${junit5.version}</version>
+			<version>${junit.version}</version>
 			<scope>test</scope>
 		</dependency>
 
