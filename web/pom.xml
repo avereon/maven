@@ -44,6 +44,11 @@
 		<maven.buildnumber.version>1.4</maven.buildnumber.version>
 		<maven.tomcat7.version>2.2</maven.tomcat7.version>
 
+		<zarra.version>0.7</zarra.version>
+		<zenna.version>0.7</zenna.version>
+		<zerra.version>0.7</zerra.version>
+		<zevra.version>0.7</zevra.version>
+
 		<cameo.version>2.9</cameo.version>
 	</properties>
 
