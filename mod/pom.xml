@@ -9,7 +9,7 @@
 	<parent>
 		<groupId>com.avereon.pom</groupId>
 		<artifactId>prd</artifactId>
-		<version>3.3.0</version>
+		<version>3.3.1</version>
 		<relativePath>../prd</relativePath>
 	</parent>
 
@@ -21,7 +21,8 @@
 
 	<properties>
 		<!-- Version numbers updated 11 Oct 2021 -->
-		<xenon.version>[1.5,)</xenon.version>
+		<!-- Minimum dependency versions -->
+		<xenon.version>[1.6-SNAPSHOT,)</xenon.version>
 	</properties>
 
 	<repositories>
