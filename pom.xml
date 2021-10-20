@@ -4,13 +4,7 @@
 
 	<modelVersion>4.0.0</modelVersion>
 
-	<parent>
-		<groupId>com.avereon.pom</groupId>
-		<artifactId>jar</artifactId>
-		<version>3.2.0</version>
-		<relativePath>jar</relativePath>
-	</parent>
-
+	<groupId>com.avereon.pom</groupId>
 	<artifactId>agg</artifactId>
 	<version>3.0.0</version>
 	<packaging>pom</packaging>
