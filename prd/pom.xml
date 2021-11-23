@@ -10,7 +10,7 @@
 	<parent>
 		<groupId>com.avereon.pom</groupId>
 		<artifactId>jar</artifactId>
-		<version>3.3.2</version>
+		<version>3.3.3</version>
 		<relativePath>../jar</relativePath>
 	</parent>
 

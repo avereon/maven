@@ -14,7 +14,7 @@
 		<relativePath>../top</relativePath>
 	</parent>
 
-	<version>3.3.2</version>
+	<version>3.3.3</version>
 	<artifactId>jar</artifactId>
 	<packaging>pom</packaging>
 
@@ -29,7 +29,6 @@
 
 		<!-- Minimum dependency versions -->
 		<assertj.version>[3.21,)</assertj.version>
-		<hamcrest.version>[2.2,)</hamcrest.version>
 		<junit.version>[5.8,)</junit.version>
 		<mockito.version>[4.0,)</mockito.version>
 	</properties>
@@ -61,14 +60,6 @@
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter</artifactId>
 			<version>${junit.version}</version>
-			<scope>test</scope>
-		</dependency>
-
-		<!-- Deprecated in favor of assertj-->
-		<dependency>
-			<groupId>org.hamcrest</groupId>
-			<artifactId>hamcrest-core</artifactId>
-			<version>${hamcrest.version}</version>
 			<scope>test</scope>
 		</dependency>
 
