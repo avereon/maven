@@ -78,12 +78,12 @@
 		<repository>
 			<id>avn-release</id>
 			<name>GitHub Avereon Apache Maven Packages</name>
-			<url>https://maven.pkg.github.com/avereon/release</url>
+			<url>https://maven.pkg.github.com/avereon/maven</url>
 		</repository>
 		<snapshotRepository>
 			<id>avn-snapshot</id>
 			<name>GitHub Avereon Apache Maven Packages</name>
-			<url>https://maven.pkg.github.com/avereon/snapshot</url>
+			<url>https://maven.pkg.github.com/avereon/maven</url>
 		</snapshotRepository>
 	</distributionManagement>
 
