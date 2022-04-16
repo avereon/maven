@@ -230,12 +230,12 @@
 			<id>ci</id>
 			<distributionManagement>
 				<repository>
-					<id>github</id>
+					<id>avn-release</id>
 					<name>GitHub Avereon Apache Maven Packages</name>
 					<url>https://maven.pkg.github.com/avn/release</url>
 				</repository>
 				<repository>
-					<id>github</id>
+					<id>avn-snapshot</id>
 					<name>GitHub Avereon Apache Maven Packages</name>
 					<url>https://maven.pkg.github.com/avn/snapshot</url>
 				</repository>
