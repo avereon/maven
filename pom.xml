@@ -33,21 +33,6 @@
 
 	<profiles>
 		<profile>
-			<id>ci</id>
-			<distributionManagement>
-				<repository>
-					<id>avn-release</id>
-					<name>GitHub Avereon Apache Maven Packages</name>
-					<url>https://maven.pkg.github.com/avn/release</url>
-				</repository>
-				<snapshotRepository>
-					<id>avn-snapshot</id>
-					<name>GitHub Avereon Apache Maven Packages</name>
-					<url>https://maven.pkg.github.com/avn/snapshot</url>
-				</snapshotRepository>
-			</distributionManagement>
-		</profile>
-		<profile>
 			<!-- mvn -P tops install:install -->
 			<id>tops</id>
 			<modules>
