@@ -34,7 +34,7 @@
 	<profiles>
 		<profile>
 			<!-- mvn -P tops install:install -->
-			<id>top</id>
+			<id>tops</id>
 			<modules>
 				<module>top</module>
 			</modules>
