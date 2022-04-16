@@ -27,16 +27,16 @@ jobs:
         env:
           AVN_REPO_USERNAME: ${{ secrets.AVN_REPO_USERNAME }}
           AVN_REPO_PASSWORD: ${{ secrets.AVN_REPO_PASSWORD }}
-        run: mvn --settings .github/settings.xml -B -P tops -U help:active-profiles clean deploy:deploy
+        run: mvn --settings .github/settings.xml -B -P ci tops -U help:active-profiles clean deploy:deploy
 
       - name: Deploy POMS
         env:
           AVN_REPO_USERNAME: ${{ secrets.AVN_REPO_USERNAME }}
           AVN_REPO_PASSWORD: ${{ secrets.AVN_REPO_PASSWORD }}
-        run: mvn --settings .github/settings.xml -B -P poms -U help:active-profiles clean deploy:deploy
+        run: mvn --settings .github/settings.xml -B -P ci poms -U help:active-profiles clean deploy:deploy
 
       - name: Deploy JARS
         env:
           AVN_REPO_USERNAME: ${{ secrets.AVN_REPO_USERNAME }}
           AVN_REPO_PASSWORD: ${{ secrets.AVN_REPO_PASSWORD }}
-        run: mvn --settings .github/settings.xml -B -P jars -U help:active-profiles clean deploy
+        run: mvn --settings .github/settings.xml -B -P ci jars -U help:active-profiles clean deploy
