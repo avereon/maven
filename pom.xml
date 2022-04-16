@@ -33,10 +33,16 @@
 
 	<profiles>
 		<profile>
+			<!-- mvn -P tops install:install -->
+			<id>top</id>
+			<modules>
+				<module>top</module>
+			</modules>
+		</profile>
+		<profile>
 			<!-- mvn -P poms install:install -->
 			<id>poms</id>
 			<modules>
-				<module>top</module>
 				<module>jar</module>
 				<module>prd</module>
 				<module>prg</module>

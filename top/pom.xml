@@ -232,7 +232,12 @@
 				<repository>
 					<id>github</id>
 					<name>GitHub Avereon Apache Maven Packages</name>
-					<url>https://maven.pkg.github.com/avn</url>
+					<url>https://maven.pkg.github.com/avn/release</url>
+				</repository>
+				<repository>
+					<id>github</id>
+					<name>GitHub Avereon Apache Maven Packages</name>
+					<url>https://maven.pkg.github.com/avn/snapshot</url>
 				</repository>
 				<!-- <repository>
 					<id>avn-release</id>
