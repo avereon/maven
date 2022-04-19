@@ -19,17 +19,18 @@
 		</repository>
 	</repositories>
 
-	<!-- <distributionManagement>
+	<distributionManagement>
 		<repository>
 			<id>avn-release</id>
-			<url>https://repo.avereon.com/avn-release/</url>
+			<name>GitHub Avereon Apache Maven Packages</name>
+			<url>https://maven.pkg.github.com/avereon/maven</url>
 		</repository>
-
 		<snapshotRepository>
 			<id>avn-snapshot</id>
-			<url>https://repo.avereon.com/avn-snapshot/</url>
+			<name>GitHub Avereon Apache Maven Packages</name>
+			<url>https://maven.pkg.github.com/avereon/maven</url>
 		</snapshotRepository>
-	</distributionManagement> -->
+	</distributionManagement>
 
 	<profiles>
 		<profile>
