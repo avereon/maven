@@ -23,11 +23,11 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-maven-
 
-      - name: Deploy TOPS
+      - name: Deploy TOP POM
         env:
           AVN_REPO_USERNAME: ${{ secrets.AVN_REPO_USERNAME }}
           AVN_REPO_PASSWORD: ${{ secrets.AVN_REPO_PASSWORD }}
-        run: mvn --settings .github/settings.xml -B -P tops -U help:active-profiles clean deploy:deploy
+        run: mvn --settings .github/settings.xml -B -P top -U help:active-profiles clean deploy:deploy
 
       - name: Deploy POMS
         env:
@@ -39,4 +39,4 @@ jobs:
         env:
           AVN_REPO_USERNAME: ${{ secrets.AVN_REPO_USERNAME }}
           AVN_REPO_PASSWORD: ${{ secrets.AVN_REPO_PASSWORD }}
-        run: mvn --settings .github/settings.xml -B -P jars -U help:active-profiles clean deploy
+        run: mvn --settings .github/settings.xml -B -P asms -U help:active-profiles clean deploy

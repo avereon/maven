@@ -34,8 +34,8 @@
 
 	<profiles>
 		<profile>
-			<!-- mvn -P tops install:install -->
-			<id>tops</id>
+			<!-- mvn -P top install:install -->
+			<id>top</id>
 			<modules>
 				<module>top</module>
 			</modules>
@@ -52,8 +52,8 @@
 			</modules>
 		</profile>
 		<profile>
-			<!-- mvn -P jars install -->
-			<id>jars</id>
+			<!-- mvn -P asms install -->
+			<id>asms</id>
 			<modules>
 				<module>asm</module>
 			</modules>
