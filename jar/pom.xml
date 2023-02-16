@@ -10,11 +10,11 @@
 	<parent>
 		<groupId>com.avereon.pom</groupId>
 		<artifactId>top</artifactId>
-		<version>3.4.0</version>
+		<version>3.4.1</version>
 		<relativePath>../top</relativePath>
 	</parent>
 
-	<version>3.3.3</version>
+	<version>3.3.4</version>
 	<artifactId>jar</artifactId>
 	<packaging>pom</packaging>
 
