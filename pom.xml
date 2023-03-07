@@ -6,7 +6,7 @@
 
 	<groupId>com.avereon.pom</groupId>
 	<artifactId>agg</artifactId>
-	<version>3.0.0</version>
+	<version>3.5.0</version>
 	<packaging>pom</packaging>
 
 	<name>Avereon Pom Aggregator</name>
@@ -44,6 +44,7 @@
 			<!-- mvn -P poms install:install -->
 			<id>poms</id>
 			<modules>
+				<module>top</module>
 				<module>jar</module>
 				<module>prd</module>
 				<module>prg</module>

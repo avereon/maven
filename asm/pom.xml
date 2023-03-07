@@ -9,12 +9,11 @@
 	<parent>
 		<groupId>com.avereon.pom</groupId>
 		<artifactId>top</artifactId>
-		<version>3.4.1</version>
+		<version>3.5.0</version>
 		<relativePath>../top</relativePath>
 	</parent>
 
 	<artifactId>asm</artifactId>
-	<version>3.3.2</version>
 	<packaging>jar</packaging>
 
 	<name>Avereon Assemblies</name>

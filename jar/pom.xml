@@ -10,11 +10,10 @@
 	<parent>
 		<groupId>com.avereon.pom</groupId>
 		<artifactId>top</artifactId>
-		<version>3.4.1</version>
+		<version>3.5.0</version>
 		<relativePath>../top</relativePath>
 	</parent>
 
-	<version>3.3.4</version>
 	<artifactId>jar</artifactId>
 	<packaging>pom</packaging>
 
@@ -22,15 +21,15 @@
 	<description>The parent POM for Avereon JAR projects using Maven.</description>
 
 	<properties>
-		<!-- Version numbers updated 11 Oct 2021 -->
+		<!-- Version numbers updated 07 Mar 2023 -->
 
 		<!-- Version ranges not allowed in annotation processors -->
-		<lombok.version>1.18.22</lombok.version>
+		<lombok.version>1.18.26</lombok.version>
 
 		<!-- Minimum dependency versions -->
-		<assertj.version>[3.21,)</assertj.version>
-		<junit.version>[5.8,)</junit.version>
-		<mockito.version>[4.0,)</mockito.version>
+		<assertj.version>[3.24,)</assertj.version>
+		<junit.version>[5.9,)</junit.version>
+		<mockito.version>[4.11,)</mockito.version>
 	</properties>
 
 	<repositories>

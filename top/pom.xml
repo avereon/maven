@@ -8,7 +8,7 @@
 
 	<groupId>com.avereon.pom</groupId>
 	<artifactId>top</artifactId>
-	<version>3.4.1</version>
+	<version>3.5.0</version>
 	<packaging>pom</packaging>
 
 	<name>Avereon Top Parent POM</name>
@@ -22,21 +22,22 @@
 		<maven.build.timestamp.format>yyyy-MM-dd HH:mm:ss</maven.build.timestamp.format>
 		<project.timestamp>${maven.build.timestamp}</project.timestamp>
 
-		<!-- Version numbers updated 11 Oct 2021 -->
-		<maven.compiler.version>3.8.1</maven.compiler.version>
-		<maven.resources.version>3.2.0</maven.resources.version>
+		<!-- Version numbers updated 07 Mar 2023 -->
+		<maven.compiler.version>3.11.0</maven.compiler.version>
+		<maven.resources.version>3.3.0</maven.resources.version>
 		<maven.surefire.version>3.0.0-M9</maven.surefire.version>
-		<maven.jar.version>3.2.0</maven.jar.version>
+		<maven.jar.version>3.3.0</maven.jar.version>
 		<maven.war.version>3.3.2</maven.war.version>
-		<maven.plugin.version>3.6.1</maven.plugin.version>
+		<maven.plugin.version>3.8.1</maven.plugin.version>
 		<maven.jarsigner.version>3.0.0</maven.jarsigner.version>
-		<maven.assembly.version>3.3.0</maven.assembly.version>
-		<maven.deploy.version>3.0.0-M1</maven.deploy.version>
+		<maven.assembly.version>3.5.0</maven.assembly.version>
+		<maven.deploy.version>3.1.0</maven.deploy.version>
 		<maven.source.version>3.2.1</maven.source.version>
-		<maven.javadoc.version>3.3.1</maven.javadoc.version>
-		<maven.buildnumber.version>1.4</maven.buildnumber.version>
-		<maven.dependency.version>3.2.0</maven.dependency.version>
-		<maven.exec.version>3.0.0</maven.exec.version>
+		<maven.javadoc.version>3.5.0</maven.javadoc.version>
+		<maven.dependency.version>3.5.0</maven.dependency.version>
+
+		<maven.buildnumber.version>3.0.0</maven.buildnumber.version>
+		<maven.exec.version>3.1.0</maven.exec.version>
 
 		<jlink.module.path>${basedir}/target/dependency${path.separator}${basedir}/target/${project.build.finalName}.${project.packaging}</jlink.module.path>
 	</properties>
