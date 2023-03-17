@@ -24,8 +24,8 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-		<!-- Version numbers updated 11 Oct 2021 -->
-		<java.version>11</java.version>
+		<!-- Version numbers updated 17 Mar 2023 -->
+		<java.version>17</java.version>
 
 		<hamcrest.version>2.2</hamcrest.version>
 		<lombok.version>1.18.22</lombok.version>
