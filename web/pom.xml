@@ -13,7 +13,7 @@
 
 	<groupId>com.avereon.pom</groupId>
 	<artifactId>web</artifactId>
-	<version>3.5.2</version>
+	<version>3.5.3</version>
 	<packaging>pom</packaging>
 
 	<name>Avereon Web Parent POM</name>
@@ -24,23 +24,27 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-		<!-- Version numbers updated 17 Mar 2023 -->
+		<!-- Version numbers updated 23 May 2023 -->
 		<java.version>17</java.version>
 
 		<hamcrest.version>2.2</hamcrest.version>
 		<lombok.version>1.18.22</lombok.version>
 
-		<maven.compiler.version>3.8.1</maven.compiler.version>
-		<maven.resources.version>3.2.0</maven.resources.version>
-		<maven.surefire.version>3.0.0-M5</maven.surefire.version>
-		<maven.jar.version>3.2.0</maven.jar.version>
+		<maven.compiler.version>3.11.0</maven.compiler.version>
+		<maven.resources.version>3.3.1</maven.resources.version>
+		<maven.surefire.version>3.1.0</maven.surefire.version>
+		<maven.jar.version>3.3.0</maven.jar.version>
 		<maven.war.version>3.3.2</maven.war.version>
+		<maven.plugin.version>3.8.1</maven.plugin.version>
 		<maven.jarsigner.version>3.0.0</maven.jarsigner.version>
-		<maven.assembly.version>3.3.0</maven.assembly.version>
-		<maven.deploy.version>3.0.0-M1</maven.deploy.version>
-		<maven.source.version>3.2.1</maven.source.version>
-		<maven.javadoc.version>3.3.1</maven.javadoc.version>
-		<maven.buildnumber.version>1.4</maven.buildnumber.version>
+		<maven.assembly.version>3.5.0</maven.assembly.version>
+		<maven.deploy.version>3.1.0</maven.deploy.version>
+		<maven.source.version>3.3.0</maven.source.version>
+		<maven.javadoc.version>3.5.0</maven.javadoc.version>
+		<maven.dependency.version>3.6.0</maven.dependency.version>
+
+		<maven.buildnumber.version>3.0.0</maven.buildnumber.version>
+		<maven.exec.version>3.1.0</maven.exec.version>
 
 		<zarra.version>0.8-SNAPSHOT</zarra.version>
 		<zenna.version>0.8-SNAPSHOT</zenna.version>
