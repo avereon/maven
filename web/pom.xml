@@ -13,7 +13,7 @@
 
 	<groupId>com.avereon.pom</groupId>
 	<artifactId>web</artifactId>
-	<version>3.6.0</version>
+	<version>3.7.0</version>
 	<packaging>pom</packaging>
 
 	<name>Avereon Web Parent POM</name>
@@ -46,10 +46,10 @@
 		<maven.buildnumber.version>3.0.0</maven.buildnumber.version>
 		<maven.exec.version>3.1.0</maven.exec.version>
 
-		<zarra.version>0.8-SNAPSHOT</zarra.version>
-		<zenna.version>0.8-SNAPSHOT</zenna.version>
-		<zerra.version>0.8-SNAPSHOT</zerra.version>
-		<zevra.version>0.8-SNAPSHOT</zevra.version>
+		<zarra.version>0.8</zarra.version>
+		<zenna.version>0.8</zenna.version>
+		<zerra.version>0.8</zerra.version>
+		<zevra.version>0.8</zevra.version>
 
 		<cameo.version>2.10</cameo.version>
 	</properties>
