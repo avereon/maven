@@ -9,13 +9,12 @@
 	<parent>
 		<groupId>com.avereon.pom</groupId>
 		<artifactId>prd</artifactId>
-		<version>3.5.3</version>
+		<version>3.5.4</version>
 		<relativePath>../prd</relativePath>
 	</parent>
 
 	<artifactId>mod</artifactId>
 	<packaging>pom</packaging>
-	<version>3.5.4</version>
 
 	<name>Avereon Module Parent POM</name>
 	<description>The parent POM for Avereon modules.</description>
