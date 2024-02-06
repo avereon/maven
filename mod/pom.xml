@@ -24,6 +24,8 @@
 		<!-- Version numbers updated 05 Feb 2024 -->
 		<!-- Minimum dependency versions -->
 		<xenon.version>1.8-SNAPSHOT</xenon.version>
+		<!-- Has to be at least what Xenon is -->
+		<java.version>21</java.version>
 	</properties>
 
 	<repositories>
