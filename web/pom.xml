@@ -30,7 +30,7 @@
 		<hamcrest.version>2.2</hamcrest.version>
 		<lombok.version>1.18.30</lombok.version>
 
-		<maven.compiler.version>3.12.1</maven.compiler.version>
+		<maven.compiler.version>3.13.0</maven.compiler.version>
 		<maven.resources.version>3.3.1</maven.resources.version>
 		<maven.surefire.version>3.2.5</maven.surefire.version>
 		<maven.jar.version>3.3.0</maven.jar.version>
