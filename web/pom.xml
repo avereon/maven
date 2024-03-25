@@ -28,7 +28,7 @@
 		<java.version>17</java.version>
 
 		<hamcrest.version>2.2</hamcrest.version>
-		<lombok.version>1.18.30</lombok.version>
+		<lombok.version>1.18.32</lombok.version>
 
 		<maven.compiler.version>3.12.1</maven.compiler.version>
 		<maven.resources.version>3.3.1</maven.resources.version>
