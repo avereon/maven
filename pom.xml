@@ -6,7 +6,7 @@
 
 	<groupId>com.avereon.pom</groupId>
 	<artifactId>agg</artifactId>
-	<version>3.5.4</version>
+	<version>3.5.6</version>
 	<packaging>pom</packaging>
 
 	<name>Avereon Pom Aggregator</name>
