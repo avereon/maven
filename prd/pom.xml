@@ -10,7 +10,7 @@
 	<parent>
 		<groupId>com.avereon.pom</groupId>
 		<artifactId>jar</artifactId>
-		<version>3.5.7</version>
+		<version>3.5.8</version>
 		<relativePath>../jar</relativePath>
 	</parent>
 
@@ -24,7 +24,7 @@
 		<!-- Version numbers updated 07 Mar 2023 -->
 		<product-name>${project.name}</product-name>
 		<product-identifier>${project.artifactId}</product-identifier>
-		<asm.version>3.5.7</asm.version>
+		<asm.version>3.5.8</asm.version>
 	</properties>
 
 	<repositories>
