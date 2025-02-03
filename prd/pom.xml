@@ -24,7 +24,6 @@
 		<!-- Version numbers updated 07 Mar 2023 -->
 		<product-name>${project.name}</product-name>
 		<product-identifier>${project.artifactId}</product-identifier>
-		<asm.version>${project.version}</asm.version>
 	</properties>
 
 	<repositories>
@@ -83,7 +82,7 @@
 						<dependency>
 							<groupId>com.avereon.pom</groupId>
 							<artifactId>asm</artifactId>
-							<version>${asm.version}</version>
+							<version>${project.parent.version}</version>
 						</dependency>
 					</dependencies>
 				</plugin>
