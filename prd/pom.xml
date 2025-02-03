@@ -24,7 +24,7 @@
 		<!-- Version numbers updated 07 Mar 2023 -->
 		<product-name>${project.name}</product-name>
 		<product-identifier>${project.artifactId}</product-identifier>
-		<asm.version>${project.parent.version}</asm.version>
+		<asm.version>3.5.7</asm.version>
 	</properties>
 
 	<repositories>
