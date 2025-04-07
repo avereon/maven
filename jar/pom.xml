@@ -24,7 +24,7 @@
 		<!-- Version numbers updated 02 Feb 2025 -->
 
 		<!-- Version ranges not allowed in annotation processors -->
-		<lombok.version>1.18.36</lombok.version>
+		<lombok.version>1.18.38</lombok.version>
 
 		<!-- Minimum dependency versions -->
 		<assertj.version>3.27.3</assertj.version>
