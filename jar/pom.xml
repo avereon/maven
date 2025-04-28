@@ -10,7 +10,7 @@
 	<parent>
 		<groupId>com.avereon.pom</groupId>
 		<artifactId>top</artifactId>
-		<version>3.5.8</version>
+		<version>3.6.0</version>
 		<relativePath>../top</relativePath>
 	</parent>
 
@@ -21,19 +21,19 @@
 	<description>The parent POM for Avereon JAR projects using Maven.</description>
 
 	<properties>
-		<!-- Version numbers updated 02 Feb 2025 -->
+		<!-- Version numbers updated 28 Apr 2025 -->
 
 		<!-- Version ranges not allowed in annotation processors -->
-		<lombok.version>1.18.36</lombok.version>
+		<lombok.version>1.18.38</lombok.version>
 
 		<!-- Minimum dependency versions -->
 		<assertj.version>3.27.3</assertj.version>
-		<junit.version>5.11.4</junit.version>
+		<junit.version>5.12.2</junit.version>
 
 		<!-- Full version required for some dependencies -->
 		<!-- This is typically because of path inclusion -->
-		<bytebuddy.version>1.15.11</bytebuddy.version>
-		<mockito.version>5.15.2</mockito.version>
+		<bytebuddy.version>1.17.5</bytebuddy.version>
+		<mockito.version>5.17.0</mockito.version>
 	</properties>
 
 	<repositories>
