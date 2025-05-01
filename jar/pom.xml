@@ -29,6 +29,7 @@
 		<!-- Minimum dependency versions -->
 		<assertj.version>3.27.3</assertj.version>
 		<junit.version>5.12.2</junit.version>
+		<junit.platform.launcher.version>1.12.2</junit.platform.launcher.version>
 
 		<!-- Full version required for some dependencies -->
 		<!-- This is typically because of path inclusion -->
@@ -63,6 +64,13 @@
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter</artifactId>
 			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.junit.platform</groupId>
+			<artifactId>junit-platform-launcher</artifactId>
+			<version>${junit.platform.launcher.version}</version>
 			<scope>test</scope>
 		</dependency>
 
