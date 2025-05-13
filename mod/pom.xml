@@ -20,7 +20,7 @@
 	<description>The parent POM for Avereon Xenon modules.</description>
 
 	<properties>
-		<!-- Version numbers updated 28 Apr 2024 -->
+		<!-- Version numbers updated 28 Apr 2025 -->
 		<!-- Minimum dependency versions -->
 		<xenon.version>1.9-SNAPSHOT</xenon.version>
 		<!-- Has to be at least what Xenon is -->
