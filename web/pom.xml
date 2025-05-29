@@ -7,13 +7,13 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.4.4</version>
+		<version>3.5.0</version>
 		<relativePath></relativePath>
 	</parent>
 
 	<groupId>com.avereon.pom</groupId>
 	<artifactId>web</artifactId>
-	<version>3.7.3</version>
+	<version>3.8.0</version>
 	<packaging>pom</packaging>
 
 	<name>Avereon Web Parent POM</name>
@@ -25,7 +25,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
 		<!-- Version numbers updated 02 Feb 2025 -->
-		<java.version>17</java.version>
+		<java.version>21</java.version>
 
 		<hamcrest.version>3.0</hamcrest.version>
 		<lombok.version>1.18.38</lombok.version>
