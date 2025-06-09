@@ -37,7 +37,7 @@
 		<maven.dependency.version>3.8.1</maven.dependency.version>
 
 		<buildnumber.maven.version>3.2.1</buildnumber.maven.version>
-		<exec.maven.version>3.5.0</exec.maven.version>
+		<exec.maven.version>3.5.1</exec.maven.version>
 
 		<jlink.module.path>${basedir}/target/dependency${path.separator}${basedir}/target/${project.build.finalName}.${project.packaging}</jlink.module.path>
 	</properties>
