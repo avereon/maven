@@ -29,7 +29,7 @@
 		<!-- Minimum dependency versions -->
 		<assertj.version>3.27.3</assertj.version>
 		<junit.version>5.13.3</junit.version>
-		<junit.platform.launcher.version>1.13.3</junit.platform.launcher.version>
+		<junit.platform.launcher.version>1.13.4</junit.platform.launcher.version>
 
 		<!-- Full version required for some dependencies -->
 		<!-- This is typically because of path inclusion -->
