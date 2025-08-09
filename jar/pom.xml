@@ -10,7 +10,7 @@
 	<parent>
 		<groupId>com.avereon.pom</groupId>
 		<artifactId>top</artifactId>
-		<version>3.6.1</version>
+		<version>3.6.2</version>
 		<relativePath>../top</relativePath>
 	</parent>
 
@@ -24,6 +24,7 @@
 		<!-- Version numbers updated 28 Apr 2025 -->
 
 		<!-- Version ranges not allowed in annotation processors -->
+		<jspecify.version>1.0.0</jspecify.version>
 		<lombok.version>1.18.38</lombok.version>
 
 		<!-- Minimum dependency versions -->
@@ -45,6 +46,13 @@
 	</repositories>
 
 	<dependencies>
+
+		<dependency>
+			<groupId>org.jspecify</groupId>
+			<artifactId>jspecify</artifactId>
+			<version>${jspecify.version}</version>
+			<scope>provided</scope>
+		</dependency>
 
 		<dependency>
 			<groupId>org.projectlombok</groupId>
