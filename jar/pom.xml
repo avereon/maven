@@ -28,7 +28,7 @@
 		<lombok.version>1.18.38</lombok.version>
 
 		<!-- Minimum dependency versions -->
-		<assertj.version>3.27.3</assertj.version>
+		<assertj.version>3.27.4</assertj.version>
 		<junit.version>5.13.3</junit.version>
 		<junit.platform.launcher.version>1.13.4</junit.platform.launcher.version>
 
