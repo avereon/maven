@@ -8,7 +8,7 @@
 
 	<groupId>com.avereon.pom</groupId>
 	<artifactId>top</artifactId>
-	<version>3.6.1</version>
+	<version>3.6.4</version>
 	<packaging>pom</packaging>
 
 	<name>Avereon Top Parent POM</name>
@@ -33,7 +33,7 @@
 		<maven.assembly.version>3.7.1</maven.assembly.version>
 		<maven.deploy.version>3.1.4</maven.deploy.version>
 		<maven.source.version>3.3.1</maven.source.version>
-		<maven.javadoc.version>3.11.2</maven.javadoc.version>
+		<maven.javadoc.version>3.11.3</maven.javadoc.version>
 		<maven.dependency.version>3.8.1</maven.dependency.version>
 
 		<buildnumber.maven.version>3.2.1</buildnumber.maven.version>

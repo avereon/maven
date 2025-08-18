@@ -9,13 +9,12 @@
 	<parent>
 		<groupId>com.avereon.pom</groupId>
 		<artifactId>prd</artifactId>
-		<version>3.6.1</version>
+		<version>3.6.4</version>
 		<relativePath>../prd</relativePath>
 	</parent>
 
 	<artifactId>mod</artifactId>
 	<packaging>pom</packaging>
-	<version>3.6.2</version>
 
 	<name>Avereon Xenon Module Parent POM</name>
 	<description>The parent POM for Avereon Xenon modules.</description>
