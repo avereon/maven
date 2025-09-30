@@ -24,7 +24,7 @@
 		<!-- Minimum dependency versions -->
 		<xenon.version>1.9</xenon.version>
 		<!-- Has to be at least what Xenon is -->
-		<java.version>22</java.version>
+		<java.version>21</java.version>
 	</properties>
 
 	<repositories>
