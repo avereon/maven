@@ -30,7 +30,7 @@
 
 		<!-- Minimum dependency versions -->
 		<assertj.version>3.27.6</assertj.version>
-		<junit.version>5.13.4</junit.version>
+		<junit.version>6.0.0</junit.version>
 		<junit.platform.launcher.version>1.13.4</junit.platform.launcher.version>
 
 		<!-- Full version required for some dependencies -->
