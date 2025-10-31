@@ -28,7 +28,7 @@
 		<maven.surefire.version>3.5.4</maven.surefire.version>
 		<maven.jar.version>3.4.2</maven.jar.version>
 		<maven.war.version>3.5.0</maven.war.version>
-		<maven.plugin.version>3.15.1</maven.plugin.version>
+		<maven.plugin.version>3.15.2</maven.plugin.version>
 		<maven.jarsigner.version>3.1.0</maven.jarsigner.version>
 		<maven.assembly.version>3.7.1</maven.assembly.version>
 		<maven.deploy.version>3.1.4</maven.deploy.version>
