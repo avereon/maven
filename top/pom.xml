@@ -34,7 +34,7 @@
 		<maven.deploy.version>3.1.4</maven.deploy.version>
 		<maven.source.version>3.4.0</maven.source.version>
 		<maven.javadoc.version>3.12.0</maven.javadoc.version>
-		<maven.dependency.version>3.9.0</maven.dependency.version>
+		<maven.dependency.version>3.10.0</maven.dependency.version>
 
 		<buildnumber.maven.version>3.2.1</buildnumber.maven.version>
 		<exec.maven.version>3.6.3</exec.maven.version>
